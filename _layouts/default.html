@@ -1,14 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAA
+    AQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAACmenQAp3p0AJ1/gwCNbmwAb
+    32ZAH9WUgCNseIAhltYAKfO8ACzhYMAp9D2AI5fWwAkIiYAclVZALmMhgCs1PkAr9f5AI9u
+    bQCEWVMAhlpWAJWv1ACHl7oAwpqVAH9hYgB7h50ASUhPAIyevQCes9cAjp69AHZRTgC6kIo
+    Ahm10ALDX+gCbZVwAf1ZUAHKAkgCRk50AeH+YAK6HggCBn8oAq8vpAJyzzwCqzOwAjF5aAJ
+    t3dwB8aXIAt4eCAG9TVQB0UU8AdVFPAKrT+ACBcW8AdXSKAK7X+wC4kY4Aenl+AKN/fQCPc
+    GwAg3aHAJ/H8ABhUVAAmmxpAIKYvwCCW1sAoWlgAMCZlACVcnIArYSDAFlZaACLXFUASUdO
+    AI1dWAB2b3MAclBNAJ91cgCbengAjWNhAIKIogCMaWoAo357AHpWVgCZZV4ApX9+AJBwbQC
+    RcG0Al2lqAHRfaAChxu4Av5iSAK6BewCEWlkAmW1tAMCZlQCHXFYAkXh8AKyIhwCmzO4Ail
+    1ZAHlocQDEnZgAxZ2YAJ6x1ABzT0sAdFBOAI6ewAB1UVEAdlFRAJGiugCPYl8AuI6HAHpTT
+    gCt1voAfFRRAH11hgCPcG4AkXBuAK6AeQCIsecAh5ayAGJQTwCDXVoAs4N5AJSy2ACXs9IA
+    w5yWAGFVXgCgc24Ac09MAI1gWgCLYV0AkGBaAG9VVQCJhZsAclZYAHdUUgB5U08AhGtyAHp
+    UUgCMq80Aj3BvAISTswCRcG8ApMXkAGFPTQB1YWcAc2dnAIuSsABxaW0AiFtVALODegB/gJ
+    YAwpyXAKZrYADDnJcAg3+TAKdrYACQm7AAtIWAAJC36ACDY2QAsoeGAHNPTQCdd3IAqdDzA
+    G9SVgCUnbYAjoKTAKzV+QCt1fkARTU3AKV5eACggX4AbWRoAK9/eACGWlMAhltWAMGblQBT
+    PT0AwpuVAJd0cwCOtuYAmHRzAJl0cwBwTksAs4WBAHuHowBzT04AclBRALmIgQCQZF8ArNT
+    3AHlSTgCPosYAPDo+AHZ0hgCgfXwAh4ygAKG+2gC6ko0AjW5rAI5uawCGcHoAgldUAL2WkA
+    B/eIkApoKCAKPF5gB9fokAk7HPAKFuawC0h38As4aFAG9QUgCqz/IAdE9PAHVPTwCcutgAj
+    mFgACQkKwCs1PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAX43HA1
+    5lGxsbpYtyEXNTq0Ixf6HWPnW0niekabrXBTmziWZwu4w7bzWozpwNasrItSIdPxoPNW9vN
+    TU1a2krVLZaE4QyNTXbvjVvp9jUvaIs2QvAo281b9s1YM+RL2wmS1VMFJMkEDU1NSozd7GA
+    y0uqFxiPPCg1NTUgRgypRxbDOJCswdrFNW8IviM3REUeUk+DfUgZitUKe9C5BMJd0kNKty1
+    xJQaOV3bENJqFgpWgW0kwn5IVKXqWOlaIZ1GV0z1urq/MyRxoYh9Qgb9AeQnRhyESeE5Npo
+    YHlJRhmJUJuA68Wa0AzQJ+AXSdLpuVNlxYsGSwl5lBfGNjssZ5bQAAAAAAAAAAAAAAAAAAA
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" 
+    rel="icon" type="image/x-icon" />
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}
+      {% endif %}</title>
+    
+    <meta name="description" content="{% if page.description %}
+      {{ page.description | strip_html | strip_newlines | truncate: 160 }}
+      {% else %}{{ site.description }}{% endif %}">
+
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | 
+      prepend: site.baseurl }}">
+  </head>
+
   <body>
-      {% include header.html %}
-      <section id="about">
-        {% include about.html %}
-      </section>
-      <section id="projects">
-        {% include projects.html %}
-      </section>
-        {{ content }}
-      {% include footer.html %}
+    <div id="particles-js">
+      <div class="header">
+        <h1>
+          <span class="site-title">{{site.username}}</span>
+          <span class="site-description">{{site.user_title}}</span>
+        </h1>
+        
+        <div class="header-icons">
+          <a aria-label="Send email" 
+            href="mailto:rafwiskailnicki@gmail.com">
+            <i class="icon fa fa-envelope"></i>
+          </a>
+  
+          <a aria-label="My Github" target="_blank" 
+            href="https://github.com/rafaelwi">
+            <i class="icon fa fa-github-alt" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="header-links">
+          <a class="link" href="#about" data-scroll>About Me</a>
+          <a class="link" href="#projects" data-scroll>Projects</a>
+        </div>
+      </div>
+      <a class="down" href="#about" data-scroll>
+        <i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+    </div> <!-- particles -->
+
+    <section id="about">
+      <div class="user-details">
+        <h1> About Rafael </h1>
+        <p> {{site.user_description}} </p>
+      </div>
+
+      <div class="user">
+        <div class="tech">
+          <h2>Skills</h2>
+          <i class="devicon-c-plain-wordmark colored"></i>
+          <i class="devicon-python-plain colored"></i>
+          <i class="devicon-java-plain colored"></i>
+          <i class="devicon-git-plain colored"></i>
+          <i class="devicon-linux-plain colored"></i>
+          <p>I have been programming since high school. Along the way, I've 
+             learned C, Python, and Java. I also have skills in Git, GNU/Linux,
+             and MySQL. Currently, I'm learning Go. In the future, I would also
+             like to learn C# and Nim.
+          </p>
+        </div>
+      </div>  
+    </section>  <!-- about section -->
+
+    <section id="projects">
+      <div class="user-details">
+        <h1> Rafael's Projects </h1>
+      </div>
+        
+      <h3><i>Coming Soon!</i></h3>
+
+      <!--
+      <div class="user-projects">      
+        <div class="images-right">
+          <img alt="mountains" src="{{ "/assets/img/mountains.jpg" | 
+            prepend: site.baseurl }}" />
+        </div>
+        
+        <div class="contents">
+          <h3> Project Title </h3>
+          <ul>
+            <li> Featured Skills</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+             enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+             nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <a class="project-link" href="#">Check it out</a>
+        </div>
+      </div>
+        
+      <div class="user-projects">
+        <div class="images-left">
+          <img alt="mountains" src="{{ "/assets/img/skate.jpg" | 
+            prepend: site.baseurl }}" />
+        </div>
+        
+        <div class="contents-right">
+          <h3> Project Title </h3>
+          <ul>
+            <li> Featured Skills</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
+             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+             enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+             nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <a class="project-link" href="#">Check it out</a>
+        </div>
+      </div>
+      -->     
+    </section>  <!-- projects section -->
+
+    {{ content }}
+    
+    <footer class="footer">
+      <p>&copy; {{site.username}}</p>
+      <p>Template built with Jekyll and <span class="love">❤</span> by 
+          <a href="https://github.com/nrandecker">Nathan Randecker</a>
+      </p>
+    </footer>
+
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+      </script>
+    <script src="{{ "/assets/js/sweet-scroll.min.js" | 
+      prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
   </body>
+</html>
