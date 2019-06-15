@@ -1,8 +1,7 @@
 # Site settings
 title: Rafael Wiska-Ilnicki
 description: Second-Year Software Engineering Student
-# baseurl: "/particle" # the subpath of your site, e.g. /blog
-url: "https://rafaelwi.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "https://rafaelwi.github.io"
 
 # User settings
 username: Rafael Wiska-Ilnicki
@@ -16,12 +15,6 @@ groups.
 I hope you enjoy my website and portfolio!" 
 user_title: "Second-Year Software Engineering Student"
 email: rafwiskailnicki@gmail.com
-#twitter_username: lorem_ipsum
 github_username:  rafaelwi
-#gplus_username:  lorem_ipsum
-
-# Google-analytics
-google-analytics:
-  id: ""
 
 exclude: ['package.json', 'src' , 'node_modules']
