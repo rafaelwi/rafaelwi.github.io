@@ -32,7 +32,7 @@
 .contents {
   @media only screen and (min-width: $cut) {
     margin-left: 0;
-    width: 48%;
+    width: 90%;
   }
 }
 
@@ -83,7 +83,7 @@
               background-color 0.3s ease-out,
               border-color 0.3s ease-out;
   &:hover {
-    background-color: $purple;
+    background-color: $red;
     border-color: $purple;
     color: #fff;
     transition: color 0.3s ease-in,
@@ -98,4 +98,16 @@
                 background-color 0.3s ease-in,
                 border-color 0.3s ease-in;
   }
+}
+
+.project-text {
+  float: left;
+}
+
+.project-button {
+  float: right;
+}
+
+.contents {
+    width: 100%
 }
