@@ -101,25 +101,24 @@
         <h1> Rafael's Projects </h1>
       </div>
 
-      <div class="contents">
-        <div class="project-text">
-          <p>A few things I've been working on in my free time. Most of my 
-             projects can be found on my <a href="https://github.com/rafaelwi">
-             GitHub.</a>
-          </p>
-        </div>
-
-        <div class="project-button">
-          <a class="project-link" href="#">Check it out</a>
-        </div>
+      <div class="project-text-wrapper">
+        <p id="project-text">A few things I've been working on in my free time.
+            Most of my projects can be found on my 
+            <a href="https://github.com/rafaelwi"> GitHub.</a> These are just a
+            few of my favourites.
+        </p>
       </div>
+
+      <div class="project-button">
+          <a class="project-link" href="#">See all projects</a>
+        </div>
 
       <!-- Project cards -->
       <div class="row">
         <div class="card" id="left-card">
             <img alt="mountains" src="{{ "/assets/img/skate.jpg" |
             prepend: site.baseurl }}" style="width:100%"/>
-            <div class="card-container">
+            <div class="card-text">
               <h4>Project One</h4>
               <p>Lorem ipsum dolor noot noot i dont know much about lorem
                 ipsum oh well this is placeholder text
@@ -131,7 +130,7 @@
         <div class="card" id="right-card">
           <img alt="mountains" src="{{ "/assets/img/mountains.jpg" |
           prepend: site.baseurl }}"  style="width:100%"/>
-          <div class="card-container">
+          <div class="card-text">
             <h4>Project Two</h4>
             <p>Gamers. We have been taught to fight. We have been left in the 
               dust. When we started out, we were just molecules, but we are 
