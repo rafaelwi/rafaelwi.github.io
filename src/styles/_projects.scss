@@ -100,19 +100,21 @@
   }
 }
 
-.project-text {
-  float: left;
+.project-text-wrapper {
+    margin: 10px;
+    text-align: center;
+    width: 90%;
+}
+
+#project-text {
+  text-align: center;
+  margin: 5px auto;
 }
 
 .project-button {
-  float: right;
+  text-align: center;
 }
 
-
-
-.contents {
-    width: 100%
-}
 
 .row {
     float: left;
@@ -124,15 +126,14 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.4s;
-    width: 40%;
+    width: 45%;
     padding: 6px;
     margin: 10px;
-    //float: left;
     display: inline-block;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
-.card-container {
+.card-text {
     padding: 2px 5px;
     text-align: left;
 }
