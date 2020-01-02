@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "unifont";
+    src: url("../fonts/unifont.woff2");
+}
+
+#a404-head, #a404-text, #a404-link {
+    font-family: "unifont";
+}
