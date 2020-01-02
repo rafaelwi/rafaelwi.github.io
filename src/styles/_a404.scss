@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "unifont";
+  src: url("unifont.woff2");
+}
+@font-face {
+font-family: "unifont-upper";
+src: url("unicode.woff2");
+unicode-range: U+10000-10FFFF;
+}
+
+  
+#a404-head, #a404-text, #a404-link {
+    font-family: "Courier";
+    font-size: 30px;
+}
