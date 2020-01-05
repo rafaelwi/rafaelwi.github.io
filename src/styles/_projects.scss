@@ -132,7 +132,11 @@
     margin: 10px;
     display: inline-block;
     vertical-align: middle;
+    @media screen and (max-width: 870px) {
+        width: 100%
+    }
 }
+
 
 .card-text {
     padding: 2px 5px;
