@@ -35,135 +35,146 @@
 
     <meta name="description" content="Some of the personal projects, school
     projects, and tinkering I've done.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/projects.css">
   </head>
   <body>
-      <div class="project-header">
-        <a href="/"><h1 class="project-header-text">Rafael Wiska-Ilnicki/Projects/</h1></a>
+    <div class="project-header">
+      <a href="/"><h1 class="project-header-text">Rafael Wiska-Ilnicki/Projects/</h1></a>
 
       <span>
         <ul class="nav">
           <li><a href="/#about">About</a></li>
-          <li><a href="/projects.html">Projects</a></li>
-          <li><a href="/resume.html">Resume</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/resume.pdf" target="_blank">Resume</a></li>
           <li><a href="/blog.html">Blog</a></li>
         </ul>
       </span>
     </div>
 
-    <!-- cards -->
-    <h4>Here are a list of the personal projects, school projects, and tinkering
-      I've done.
-    </h4>
+    <div class="proj-sect">
+      <!-- cards -->
+      <h4>Here are a list of the personal projects, school projects, and tinkering
+        I've done.
+      </h4>
 
-    <h2>Personal Projects</h2>
-    <div class="proj-row">
-      <div class="proj-card" id="pp-1-1">
-        <img alt="Stuff Discord Says Bot Image" src="assets/img/sds.jpg">
-        <div class="proj-card-text">
-          <h4>SDS (Stuff Discord Says)</h4>
-          <p>A Discord bot that parrots users' messages, which can create
-            hilarious interactions. Built using Golang and currently hosted
-            on a Raspberry Pi.
-          </p>
-          <div class="project-button">
-            <a class="project-link" href="https://github.com/rafaelwi/sds" 
-            target="_blank">Github Repo</a>
+      <h2>Personal Projects</h2>
+      <div class="proj-row">
+        <div class="proj-card" id="pp-1-1">
+          <img alt="Stuff Discord Says Bot Image" src="assets/img/sds.jpg">
+          <div class="proj-card-text">
+            <h4>SDS (Stuff Discord Says)</h4>
+            <p>A Discord bot that parrots users' messages, which can create
+              hilarious interactions. Built using Golang and currently hosted
+              on a Raspberry Pi.
+            </p>
+            <div class="project-button">
+              <a class="project-link" href="https://github.com/rafaelwi/sds" 
+              target="_blank">Github Repo</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="proj-card" id="pp-1-2">
+          <img alt="rafaelwi.github.io" src="assets/img/homepage.jpg" style="width:100%">
+          <div class="proj-card-text">
+            <h4>rafaelwi.github.io</h4>
+            <p>This website is also a personal project of mine. This website 
+              is built using HTML, CSS, Sass, and Javascript, and uses Jekyll
+              to generate the pages. This site is hosted on Github Pages.
+            </p>
+            <div class="project-button">
+              <a class="project-link" href="https://github.com/rafaelwi/rafaelwi.github.io" 
+              target="_blank">Github Repo</a>
+            </div>
           </div>
         </div>
       </div>
-  
-      <div class="proj-card" id="pp-1-2">
-        <img alt="rafaelwi.github.io" src="assets/img/homepage.jpg" style="width:100%">
-        <div class="proj-card-text">
-          <h4>rafaelwi.github.io</h4>
-          <p>This website is also a personal project of mine. This website 
-            is built using HTML, CSS, Sass, and Javascript, and uses Jekyll
-            to generate the pages. This site is hosted on Github Pages.
-          </p>
-          <div class="project-button">
-            <a class="project-link" href="https://github.com/rafaelwi/rafaelwi.github.io" 
-            target="_blank">Github Repo</a>
-        </div>
-      </div>
-    </div>
 
-    <h2>School Projects</h2>
-    <div class="proj-row">
-      <div class="proj-card" id="sp-1-1">
-        <img alt="Dungeon Master GUI" src="assets/img/rwidm.jpg" style="width:100%">
-        <div class="proj-card-text">
-          <h4>Dungeon Master</h4>
-          <p>The final assignment from my Object Oriented Programming class. 
-            A program that allows Dungeonmasters in <i>Dungeons and 
-            Dragons</i> create immersive dungeons. DMs can customize, 
-            visualize, and save their dungeon. Built using Java and JavaFX.
-          </p>
-          <div class="project-button">
-            <a class="project-link" href="https://github.com/school-projects/2430-Dungeon-Master.jar" 
-            target="_blank">.JAR Download</a>
+      <h2 class="a2-3-head">School Projects</h2>
+      <div class="proj-row">
+        <div class="proj-card" id="sp-1-1">
+          <img alt="Dungeon Master GUI" src="assets/img/rwidm.jpg" style="width:100%">
+          <div class="proj-card-text">
+            <h4>Dungeon Master</h4>
+            <p>The final assignment from my Object Oriented Programming class. 
+              A program that allows Dungeonmasters in <i>Dungeons and 
+              Dragons</i> create immersive dungeons. DMs can customize, 
+              visualize, and save their dungeon. Built using Java and JavaFX.
+            </p>
+            <div class="project-button">
+              <a class="project-link" href="https://github.com/school-projects/2430-Dungeon-Master.jar" 
+              target="_blank">.JAR Download</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="proj-card" id="sp-1-2">
+          <img alt="tokyo" src="assets/img/tokyo-2.jpg" style="width:100%">
+          <div class="proj-card-text">
+            <h4>The Great Canadian Consumer Price Index Report</h4>
+            <p>The culminating group assignment in my Software Design II class. 
+              A program that generates charts to answer questions using Census 
+              and Consumer Price Index data. Built using Perl and R.
+            </p>
+            <div class="project-button">
+              <a class="project-link" href="https://github.com/rafaelwi/tokyo" 
+              target="_blank">Github Repo</a>
+            </div>
           </div>
         </div>
       </div>
-  
-      <div class="proj-card" id="sp-1-2">
-        <img alt="tokyo" src="assets/img/tokyo-2.jpg" style="width:100%">
-        <div class="proj-card-text">
-          <h4>The Great Canadian Consumer Price Index Report</h4>
-          <p>The culminating group assignment in my Software Design II class. 
-            A program that generates charts to answer questions using Census 
-            and Consumer Price Index data. Built using Perl and R.
-          </p>
-          <div class="project-button">
-            <a class="project-link" href="https://github.com/rafaelwi/tokyo" 
-            target="_blank">Github Repo</a>
-        </div>
-      </div>
-    </div>
 
 
-    <h2>Tinkering</h2>
-    <div class="proj-row"> <!-- first row -->
-      <div class="proj-card" id="tp-1-1">
-        <img alt="Wikicloud" src="assets/img/wordcloud.png" style="width:100%">
-        <div class="proj-card-text">
-          <h4>Wikicloud</h4>
-          <p>Text about Wikicloud. Built using Python and X</p>
+      <h2 class="a2-3-head">Tinkering</h2>
+      <div class="proj-row"> <!-- first row -->
+        <div class="proj-card" id="tp-1-1">
+          <img alt="Wikicloud" src="assets/img/wordcloud.png" style="width:100%">
+          <div class="proj-card-text">
+            <h4>Wikicloud</h4>
+            <p>A word cloud generator that creates word clouds from Wikipedia 
+              articles. The word cloud's size, font, and color can be customized.
+              The image above is a word cloud for <i>Github's</i> article.
+              Built using Python.</p>
+            <div class="project-button">
+              <a class="project-link" href="https://github.com/rafaelwi/wikicloud"
+              target="_blank">Github Repo</a>
+            </div>
+          </div>
         </div>
-        <div class="project-button">
-          <a class="project-link" href="https://github.com/rafaelwi/wikicloud"
-          target="_blank">Github Repo</a>
-        </div>
-      </div>
 
-      <div class="proj-card" id="tp-1-2">
-        <img alt="xkcdownloader" src="assets/img/xkcd.jpg" style="width:100%">
-        <div class="proj-card-text">
-          <h4>xkcdownloader</h4>
-          <p>xkcdownloader is a web scraper... Text about xkcdownloader. Built 
-            using Python and xyz.
-          </p>
-          <div class="project-button">
-            <a class="project-link" href="https://github.com/rafaelwi/xkcdownloader"
-            target="_blank">Github Repo</a>
+        <div class="proj-card" id="tp-1-2">
+          <img alt="xkcdownloader" src="assets/img/xkcd.jpg" style="width:100%">
+          <div class="proj-card-text">
+            <h4>xkcdownloader</h4>
+            <p>A web scraper for downloading xkcd comics. Comics can also be 
+              downloaded quickly in bulk. Built using Python and BeautifulSoup4.
+            </p>
+            <div class="project-button">
+              <a class="project-link" href="https://github.com/rafaelwi/xkcdownloader"
+              target="_blank">Github Repo</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="proj-row"> <!-- second row -->
-      <div class="proj-card" id="tp-2-1">
-        <img alt="PyPlaysPokemon" src="assets/img/p3.jpg" style="width:100%">
-        <div class="proj-card-text">
-          <h4>PyPlaysPokemon</h4>
-          <p>Text about PyPlaysPokemon. Built using Python and X.</p>
-        </div>
-        <div class="project-button">
-          <a class="project-link" href="https://github.com/rafaelwi/tinkerings/tree/master/PyPlaysPokemon"
-          target="_blank">Github Repo</a>
+      <div class="proj-row"> <!-- second row -->
+        <div class="proj-card" id="tp-2-1">
+          <img alt="PyPlaysPokemon" src="assets/img/p3.jpg" style="width:100%">
+          <div class="proj-card-text">
+            <h4>PyPlaysPokemon</h4>
+            <p>A Python script designed to play the first generation of Pokémon
+              games ran through an emulator such as VisualBoyAdvance. The script 
+              has chosen Squirtle as its first Pokémon but hasn't made it far out 
+              of Pallet Town.
+            </p>
+            <div class="project-button">
+              <a class="project-link" href="https://github.com/rafaelwi/tinkerings/tree/master/PyPlaysPokemon"
+              target="_blank">Github Repo</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
