@@ -3,8 +3,8 @@
 
 ## Future plans
 - [x] Add about section
-- [ ] Add projects page
-- [ ] Add resume page
+- [x] Add projects page
+- [x] Add resume page
 - [ ] Add blog section
 
 ## Credits
