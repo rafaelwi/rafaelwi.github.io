@@ -37,14 +37,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ "/assets/css/projects.css" |
+    <link rel="stylesheet" href="{{ "/assets/css/header.css" |
+    prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/blog.css" |
     prepend: site.baseurl }}">
   </head>
 
   <body>
     <!-- HEADER -->  
     <div class="project-header">
-      <a href="/"><h1 class="project-header-text">Rafael Wiska-Ilnicki/Projects/</h1></a>
+      <a href="/"><h1 class="project-header-text">~/Blog/</h1></a>
 
       <span>
         <ul class="nav">
@@ -56,14 +58,21 @@
       </span>
     </div>
     <!-- END HEADER -->
-    <ul>
+
+    <div class="blog-content">
       {% for post in site.posts %}
-        <li>
           <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <i>Posted 
+          {% assign m = post.date | date: "%-m %d" %}
+          {% case m %}
+            {% when '01 01' %}New Years Day {{ post.date | date: "%Y" }}
+            {% when '02 29' %}Leap Day {{ post.date | date: "%Y" }}
+            {% when '10 04' %}04 October {{ post.date | date: "%Y" }}</i> 🎂
+            {% else %} {{ post.date | date_to_long_string }}
+          {% endcase %}</i>
           {{ post.excerpt }}
-        </li>
       {% endfor %}
-    </ul>
+    </div>
 
   </body>
 </html>
