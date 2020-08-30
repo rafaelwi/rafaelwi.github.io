@@ -60,8 +60,16 @@
     <!-- END HEADER -->
 
     <div class="post-content">
-      <h1> {{ page.title }} </h1>
-      <i> Posted {{ page.date }}</i>
+      <h1 class="post-title"> {{ page.title }} </h1>
+      <i class="post-date">Posted 
+        {% assign m = page.date | date: "%-m %d" %}
+        {% case m %}
+          {% when '01 01' %}New Years Day {{ page.date | date: "%Y" }}
+          {% when '02 29' %}Leap Day {{ page.date | date: "%Y" }}
+          {% when '10 04' %}04 October {{ page.date | date: "%Y" }}</i> 🎂
+          {% else %} {{ page.date | date_to_long_string }}
+        {% endcase %}</i>
+        <hr>
       {{ content }}
     </div>
 

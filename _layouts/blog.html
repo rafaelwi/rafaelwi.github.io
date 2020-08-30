@@ -61,8 +61,8 @@
 
     <div class="blog-content">
       {% for post in site.posts %}
-          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <i>Posted 
+          <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <i class="post-date">Posted 
           {% assign m = post.date | date: "%-m %d" %}
           {% case m %}
             {% when '01 01' %}New Years Day {{ post.date | date: "%Y" }}
@@ -71,6 +71,7 @@
             {% else %} {{ post.date | date_to_long_string }}
           {% endcase %}</i>
           {{ post.excerpt }}
+          <hr>
       {% endfor %}
     </div>
 
