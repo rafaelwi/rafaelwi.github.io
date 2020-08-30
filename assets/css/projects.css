@@ -12,40 +12,6 @@ body {
     text-align: center;
 }
 
-.project-header {
-    width: 100%;
-    border-width: 0;
-    background: #1a222c;
-    display: inline-block;
-}
-
-.project-header-text {
-    color: #FFF;
-    font-size: 30px;
-    padding: 5px;
-    padding-left: 2%;
-    display: inline-block;
-}
-
-.nav {
-    list-style-type: none;
-    padding: 0;
-    padding-top: 5px;
-    padding-right: 2%;
-    float: right;
-}
-
-.nav li {
-    display: inline-block;
-    font-size: 20px;
-    padding: 5px;
-}
-
-.nav a {
-    color: #FFF;
-    text-decoration: none;
-}
-
 .project-button {
     text-align: center;
 }
