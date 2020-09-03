@@ -2,8 +2,8 @@
 @font-face {font-family: "unifont"; src: url("../fonts/unifont.woff2");}
 
 body {
-    font-size: 100%;
-    line-height: 1.5;
+    font-size: 105%;
+    line-height: 1.6;
     color: #555;
     font-family: 'PT Sans', sans-serif;
 }
@@ -128,22 +128,18 @@ h2 {
     max-width: 960px;
 }
 
+.user {
+    text-align: center;
+}
 
 .tech {
     margin: 10px;
-}
-
-.user {
     text-align: center;
     font-size: 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.user p {
-    font-size: 16px;
 }
 
 .user-details {
@@ -235,7 +231,7 @@ h2 {
         width: 80%;
     }
 
-    .user {
+    .tech {
         flex-wrap: nowrap;
         font-size: 75px;
     }
@@ -264,13 +260,14 @@ h2 {
 }
 
 .project-text-wrapper {
-    margin: 10px;
+    /*margin: 10px;*/
     text-align: center;
-    width: 90%;
+    /*width: 90%;*/
 }
 
 #project-text {
-    margin: 5px auto;
+    /*margin: 5px auto;*/
+    text-align: center;
 }
 
 #project-text, .project-button, .row {
