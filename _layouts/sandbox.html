@@ -47,58 +47,69 @@
   </head>
 
   <body>
-    <!-- HEADER -->  
+    <!-- BEGIN HEADER -->
+    <header class="navbar">
+      <a href="/" class="logo earl">~/Sandbox/</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn"/>
+      <label class="menu-icon" for="menu-btn">
+        <span class="navicon"></span>
+      </label>
+      <ul class="menu">
+        <li><a class="earl" href="/projects">Projects</a></li>
+        <li><a class="earl" href="/resume.pdf" target="_blank">Resume</a></li>
+        <li><a class="earl" href="/blog">Blog</a></li>        
+      </ul>
+    </header>
+    <!-- END HEADER -->
 
-    <!-- Refer to https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
-    <div class="topnav" id="nav">
-      <a href="/">~/Sandbox/</a>
-      <a href="/projects">Projects</a>
-      <a href="/resume.pdf" target="_blank">Resume</a>
-      <a href="/blog">Blog</a>
-      <a href="javascript:void(0);" class="icon" onclick="showNav()">
-        <i class= "fa fa-bars"></i>
-      </a>
-    </div>
-
+    <h1>FAKE CONTENT HERE</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, 
+        amet. Esse hic iste aut a voluptatem omnis, qui corrupti quae, alias
+        id assumenda architecto nobis mollitia? Accusantium cupiditate 
+        aperiam aspernatur. Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Ea fuga aperiam possimus, velit aut ad vel eveniet 
+        voluptatibus quibusdam eos amet voluptatum, quia laborum cum ratione, 
+        quidem modi perspiciatis deserunt.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, 
+        amet. Esse hic iste aut a voluptatem omnis, qui corrupti quae, alias
+        id assumenda architecto nobis mollitia? Accusantium cupiditate 
+        aperiam aspernatur. Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Ea fuga aperiam possimus, velit aut ad vel eveniet 
+        voluptatibus quibusdam eos amet voluptatum, quia laborum cum ratione, 
+        quidem modi perspiciatis deserunt.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, 
+        amet. Esse hic iste aut a voluptatem omnis, qui corrupti quae, alias
+        id assumenda architecto nobis mollitia? Accusantium cupiditate 
+        aperiam aspernatur. Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Ea fuga aperiam possimus, velit aut ad vel eveniet 
+        voluptatibus quibusdam eos amet voluptatum, quia laborum cum ratione, 
+        quidem modi perspiciatis deserunt.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, 
+        amet. Esse hic iste aut a voluptatem omnis, qui corrupti quae, alias
+        id assumenda architecto nobis mollitia? Accusantium cupiditate 
+        aperiam aspernatur. Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Ea fuga aperiam possimus, velit aut ad vel eveniet 
+        voluptatibus quibusdam eos amet voluptatum, quia laborum cum ratione, 
+        quidem modi perspiciatis deserunt.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, 
+        amet. Esse hic iste aut a voluptatem omnis, qui corrupti quae, alias
+        id assumenda architecto nobis mollitia? Accusantium cupiditate 
+        aperiam aspernatur. Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Ea fuga aperiam possimus, velit aut ad vel eveniet 
+        voluptatibus quibusdam eos amet voluptatum, quia laborum cum ratione, 
+        quidem modi perspiciatis deserunt.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, 
+        amet. Esse hic iste aut a voluptatem omnis, qui corrupti quae, alias
+        id assumenda architecto nobis mollitia? Accusantium cupiditate 
+        aperiam aspernatur. Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Ea fuga aperiam possimus, velit aut ad vel eveniet 
+        voluptatibus quibusdam eos amet voluptatum, quia laborum cum ratione, 
+        quidem modi perspiciatis deserunt.</p>
     <script>
-      function showNav() {
-        var x = document.getElementById("nav");
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
-          x.className += " responsive";
+          x.className += ".responsive";
         } else {
           x.className = "topnav";
         }
       }
-    </script>
-
-<!--
-    <div class="project-header">
-        <a href="/"><h1 class="project-header-text">~/Sandbox/</h1></a>
-  
-      <span>
-        <ul class="nav">
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/resume.pdf" target="_blank">Resume</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="javascript:void(0);" class="icon" onclick="showNav()">
-            <i class= "fa fa-bars"></i>
-          </a>
-          </li>
-        </ul>
-      </span>
-    </div>
-  -->
-
-
-      <!-- END HEADER -->
-
-      <h1>FAKE CONTENT HERE</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, 
-          amet. Esse hic iste aut a voluptatem omnis, qui corrupti quae, alias
-          id assumenda architecto nobis mollitia? Accusantium cupiditate 
-          aperiam aspernatur. Lorem ipsum dolor sit amet consectetur, 
-          adipisicing elit. Ea fuga aperiam possimus, velit aut ad vel eveniet 
-          voluptatibus quibusdam eos amet voluptatum, quia laborum cum ratione, 
-          quidem modi perspiciatis deserunt.</p>
+      </script>
   </body>
 </html>
