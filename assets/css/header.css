@@ -7,15 +7,15 @@ body {
 /* header */
 .earl {
     color: #fff;
-
 }
+
 
 .navbar {
     background-color: #1a222c;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    display: inline-block;
     width: 100%;
     z-index: 3;
-    display: inline-block;
 }
 
 .navbar ul {
@@ -29,11 +29,11 @@ body {
 .navbar li a {
     display: block;
     padding: 20px 20px;
-    border-right: 1px solid #1a222c;
     text-decoration: none;
 }
 
 .navbar li a:hover, .navbar .menu-btn:hover {
+    border-bottom: 2px solid azure;
     background-color: #26303d;
 }
 
@@ -57,7 +57,7 @@ body {
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 28px 20px;
+    padding: 35px 20px;
     position: relative;
     user-select: none;
 }
