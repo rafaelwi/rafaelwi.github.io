@@ -33,7 +33,7 @@ body {
 }
 
 .navbar li a:hover, .navbar .menu-btn:hover {
-    border-bottom: 2px solid azure;
+    border-bottom: 2px solid aquamarine;
     background-color: #26303d;
 }
 
