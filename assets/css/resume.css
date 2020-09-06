@@ -43,9 +43,8 @@ body {
 }
 
 .info {
-    float: right;
     text-align: right;
-    padding-top: 25px;
+    padding-top: 30px;
     padding-right: 50px;
 }
 
@@ -76,7 +75,7 @@ body {
 }
 
 .cv-content ul {
-    padding-bottom: 5px;
+    padding-bottom: 7px;
     font-size: 17px;
 }
 
