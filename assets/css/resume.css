@@ -3,12 +3,72 @@ body {
 }
 
 .paper {
-    width: 8.5in;
-    height: 11in;
+    width: 8.925in;
+    height: 11.55in;
     position: relative;
     margin: 20px auto;
-    padding-top: 40px;
     padding-bottom: 40px;
     background-color: white;
     box-shadow: 0px 0px 5px 0px #888;
+}
+
+.top-blue-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #2C537E;
+}
+
+.top-gray-box {
+    width: 100%;
+    height: 130px;
+    background-color: #F0F0EF;
+}
+
+.name {
+    font-size: 3em;
+    padding-left: 50px;
+    padding-top: 30px;
+    margin: 0;
+    float: left;
+}
+
+.info {
+    float: right;
+    text-align: right;
+    padding-top: 25px;
+    padding-right: 50px;
+}
+
+.info p {
+    margin: 0;
+}
+
+.info a {
+    text-decoration: none;
+    color: #2C537E;
+}
+
+.cv-content {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.cv-content hr {
+    margin-bottom: 0;
+}
+
+.cv-content p, .cv-content h2, .cv-content ul {
+    margin: 0;
+}
+
+.cv-content h2 {
+    padding-top: 10px;
+}
+
+.cv-content ul {
+    padding-bottom: 5px;
+}
+
+.projects p {
+    padding-top: 3px;
 }
