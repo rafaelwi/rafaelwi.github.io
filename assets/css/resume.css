@@ -1,3 +1,5 @@
+
+
 body {
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -16,6 +18,14 @@ body {
     width: 100%;
     height: 15px;
     background-color: #2C537E;
+}
+
+.bottom-blue-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #2C537E;
+    position: absolute;
+    bottom: 0;
 }
 
 .top-gray-box {
@@ -67,6 +77,11 @@ body {
 
 .cv-content ul {
     padding-bottom: 5px;
+    font-size: 17px;
+}
+
+.cv-content p {
+    font-size: 17px;
 }
 
 .projects p {
