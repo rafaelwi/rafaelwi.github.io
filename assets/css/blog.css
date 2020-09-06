@@ -1,0 +1,22 @@
+.blog-content {
+    margin: auto 15%;
+}
+
+a {
+    color: #2e3440;
+    text-decoration: underline dotted;
+}
+
+.post-title {
+    margin: 25px 0 5px;
+    line-height: 1;
+}
+
+.post-date {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+hr {
+    border: 0.5px solid gainsboro;
+}

@@ -38,6 +38,9 @@
     Year Software Engineering Student at the University of Guelph.">
     <link rel="stylesheet" href="{{ "/assets/css/main.css" |
       prepend: site.baseurl }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+    <script src="https://kit.fontawesome.com/c01dab73c8.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -45,7 +48,7 @@
       <div class="header">
         <h1>
           <span class="site-title">Rafael Wiska-Ilnicki</span>
-          <span class="site-description">Second-Year Software Engineering Student</span>
+          <span class="site-description">Third-Year Software Engineering Student</span>
         </h1>
 
         <div class="header-icons">
@@ -63,8 +66,8 @@
         <div class="header-links">
           <a class="link" href="#about" data-scroll>About Me</a>
           <a class="link" href="#projects" data-scroll>Projects</a>
-          <a class="link" href="/resume.pdf" target="_blank">Resume</a>
-          <a class="link" href="/blog.html">Blog</a>
+          <a class="link" href="/resume">Resume</a>
+          <a class="link" href="/blog">Blog</a>
         </div>
       </div>
       <a class="down" href="#about" data-scroll>
@@ -73,40 +76,46 @@
 
     <section id="about">
       <div class="user-details">
-        <h1> About Rafael </h1>
-        <p> {{site.user_description}} </p>
+        <h1> About Me </h1>
+        <p>Hi, I'm Rafael, a Third-Year Software Engineering Student
+          with a Business Minor at the University of Guelph. I live in the 
+          Kitchener-Waterloo area. I have been interested in technology and programming
+          for a long time. In my free time, I like to work on my personal projects (which
+          you can find below), as well as reading and biking.
+          <br><br>I hope you enjoy my website and portfolio!</p>
       </div>
 
       <div class="user">
+        <h2>Skills</h2>
         <div class="tech">
-          <h2>Skills</h2>
           <i class="devicon-c-plain-wordmark colored"></i>
           <i class="devicon-python-plain colored"></i>
           <i class="devicon-java-plain colored"></i>
           <i class="devicon-go-line colored"></i>
+          <i class="devicon-nodejs-plain-wordmark colored"></i>
           <i class="devicon-git-plain colored"></i>
           <i class="devicon-trello-plain colored"></i>
           <i class="devicon-linux-plain colored"></i>
-          <p>I have been programming since high school. Along the way, I've
-             learned C, Python, and Java. I also have skills in Git, GNU/Linux,
-             and MySQL. Currently, I'm learning Go. In the future, I would also
-             like to learn C# and Nim.
-          </p>
         </div>
+        <p>I have been programming since high school. Along the way, I've
+            learned C, Python, and Java, Go, and Node.js. I also have skills 
+            in Git, GNU/Linux, and MySQL. Currently, I'm learning C#. In the 
+            future, I'd like to learn C++.
+        </p>
       </div>
     </section>  <!-- about section -->
 
     <section id="projects">
       <div class="user-details">
-        <h1> Rafael's Projects </h1>
+        <h1> My Projects </h1>
       </div>
 
       <div class="project-text-wrapper">
-        <p id="project-text">A few things I've been working on in my free time.
-            Most of my projects can be found on my 
-            <a href="https://github.com/rafaelwi" target="_blank"> Github.</a> 
-            These are just a few of my favourites.
-        </p>
+        <p id="project-text">
+          A few things I've been working on in my free time.
+          Most of my projects can be found on my 
+          <a href="https://github.com/rafaelwi" target="_blank"> Github.</a> 
+          These are my favourites.</p>
       </div>
 
       <div class="project-button">
@@ -143,15 +152,6 @@
         </div>
       </div> <!-- end cards -->
     </section>  <!-- projects section -->
-
-    {{ content }}
-
-    <footer class="footer">
-      <p>&copy; {{site.username}}</p>
-      <p>Template built with Jekyll and <span class="love">❤</span> by
-          <a href="https://github.com/nrandecker">Nathan Randecker</a>
-      </p>
-    </footer>
 
     <script src="{{ "/assets/js/particles.min.js" | prepend: site.baseurl }}">
       </script>
