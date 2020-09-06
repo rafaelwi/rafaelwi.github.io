@@ -86,3 +86,28 @@ body {
 .projects p {
     padding-top: 3px;
 }
+
+.projects a {
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projects a:hover {
+    color: #2C537E;
+    background-color: aliceblue;
+}
+
+.projects a:visited {
+    color: #000;
+}
+
+.job-align {
+    float: left;
+}
+
+.date-align {
+    float: right;
+    text-align: right;
+}
+
