@@ -41,7 +41,7 @@ h2 {
 }
 
 .header .site-title {
-    font-size: 50px;
+    font-size: min(11.5vw, 80px);
     display: block;
     line-height: 1;
     color: #fff;
@@ -176,10 +176,6 @@ h2 {
 }
 
 @media only screen and (min-width: 550px) {
-    .header .site-title {
-        margin: 0;
-        font-size: 80px;
-    }
     
     .contents {
         margin-left: 0;
@@ -206,11 +202,6 @@ h2 {
 
     .images-left img {
         float: left;
-    }
-
-    .header .site-title {
-        margin: 0;
-        font-size: 80px;
     }
 
     .header .site-description {
