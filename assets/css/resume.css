@@ -5,8 +5,8 @@ body {
 }
 
 .paper {
-    width: 8.925in;
-    height: 11.55in;
+    width: 875px;
+    height: 1110px;
     position: relative;
     margin: 20px auto;
     padding-bottom: 40px;
@@ -83,6 +83,82 @@ body {
     font-size: 17px;
 }
 
+.job-info-desktop {
+    display: block;
+}
+
+.job-info-mobile {
+    display: none;
+}
+
 .projects p {
     padding-top: 3px;
+}
+
+.projects a {
+    border-bottom: 1px dotted;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projects a:hover {
+    color: #2C537E;
+    background-color: aliceblue;
+}
+
+.projects a:visited {
+    color: #000;
+}
+
+.l-align {
+    float: left;
+}
+
+.r-align {
+    float: right;
+    text-align: right;
+}
+
+
+@media only screen and (max-width: 875px) {
+    .paper {
+        width: 98%;
+        height: auto;
+    }
+
+    .name {
+        width: 100%;
+        font-size: min(10vw, 3em);
+        padding: 10px 0 0;
+
+        text-align: center;   
+    }
+
+    .info {
+        width: 100%;
+        margin: 0;
+        padding-top: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .top-gray-box {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .cv-content {
+        padding: 0;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .job-info-desktop {
+        display: none;
+    }
+
+    .job-info-mobile {
+        display: block;
+        padding-bottom: 5px;    
+    }
 }
