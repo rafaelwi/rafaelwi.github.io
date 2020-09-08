@@ -6,7 +6,7 @@ body {
 
 .paper {
     width: 875px;
-    height: 1110px;
+    height: min(1110px, auto);
     position: relative;
     margin: 20px auto;
     padding-bottom: 40px;
@@ -99,6 +99,7 @@ body {
     border-bottom: 1px dotted;
     text-decoration: none;
     font-weight: bold;
+    color: #000;
 }
 
 .projects a:hover {
@@ -118,6 +119,24 @@ body {
     float: right;
     text-align: right;
 }
+
+.collapsible-content {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    display: none;
+    transition: height .25s ease-in-out;
+}
+
+.collapsible-toggle:checked + .collapsible-content {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: height .25s ease-in-out;
+}
+
+/*https://www.digitalocean.com/community/tutorials/css-collapsible*/
 
 
 @media only screen and (max-width: 875px) {
