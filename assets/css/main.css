@@ -2,7 +2,7 @@
 @font-face {font-family: "unifont"; src: url("../fonts/unifont.woff2");}
 
 body {
-    font-size: 105%;
+    font-size: 100%;
     line-height: 1.6;
     color: #555;
     font-family: 'PT Sans', sans-serif;
@@ -41,7 +41,7 @@ h2 {
 }
 
 .header .site-title {
-    font-size: min(11.5vw, 80px);
+    font-size: min(11.25vw, 80px);
     display: block;
     line-height: 1;
     color: #fff;
@@ -280,6 +280,13 @@ h2 {
     display: inline-block;
     vertical-align: middle;
 }
+
+@media only screen and (max-width: 550px) {
+    .card {
+        width: 100%;
+    }
+}
+
 
 .card-text {
     padding: 2px 5px;
