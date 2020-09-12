@@ -91,15 +91,18 @@ body {
     display: none;
 }
 
+.more-projects {
+    padding-bottom: 7px;
+}
+
 .projects p {
     padding-top: 3px;
 }
 
-.projects a {
-    border-bottom: 1px dotted;
-    text-decoration: none;
-    font-weight: bold;
-    color: #000;
+.projects a{
+    border-bottom: 1px dotted !important;
+    text-decoration: none !important;
+    color: #000 !important;
 }
 
 .projects a:hover {
