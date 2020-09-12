@@ -120,24 +120,40 @@ body {
     text-align: right;
 }
 
+input[type='checkbox'] {
+    display: none;
+}
+
+.toggle-label {
+    font-variant: small-caps;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+    
+}
+
+.collapsible-toggle:checked + .toggle-label:after {
+    content: "Less Work Experience ▲";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+}
+
 .collapsible-content {
     visibility: hidden;
-    opacity: 0;
-    height: 0;
+    overflow: hidden;
     display: none;
-    transition: height .25s ease-in-out;
 }
 
-.collapsible-toggle:checked + .collapsible-content {
+.collapsible-toggle:checked + .toggle-label + .collapsible-content {
     visibility: visible;
-    opacity: 1;
     display: block;
-    height: auto;
-    transition: height .25s ease-in-out;
 }
-
-/*https://www.digitalocean.com/community/tutorials/css-collapsible*/
-
 
 @media only screen and (max-width: 875px) {
     .paper {
