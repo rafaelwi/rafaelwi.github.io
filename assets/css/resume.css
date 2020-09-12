@@ -131,10 +131,15 @@ input[type='checkbox'] {
     -moz-user-select: none;
     -webkit-user-select: none;
     position: relative;
-    
 }
 
-.collapsible-toggle:checked + .toggle-label:after {
+.collapsible-content {
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+}
+
+#mwe-collapsible-toggle:checked + #mwe-toggle-label:after {
     content: "Less Work Experience ▲";
     position: absolute;
     top: 0;
@@ -144,13 +149,7 @@ input[type='checkbox'] {
     background: white;
 }
 
-.collapsible-content {
-    visibility: hidden;
-    overflow: hidden;
-    display: none;
-}
-
-.collapsible-toggle:checked + .toggle-label + .collapsible-content {
+#mwe-collapsible-toggle:checked + #mwe-toggle-label + .collapsible-content {
     visibility: visible;
     display: block;
 }
