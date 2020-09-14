@@ -73,6 +73,20 @@ body {
     vertical-align: middle;
 }
 
+.proj-card img {
+    width: 100%;
+}
+
+.proj-card p a {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    color: #000;
+}
+
+.proj-card p a:visited {
+    color: #000;
+}
+
 @media screen and (max-width: 870px) {
     .proj-card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

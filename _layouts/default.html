@@ -47,47 +47,48 @@
     <div id="particles-js">
       <div class="header">
         <h1>
-          <span class="site-title">Rafael&nbsp;Wiska&#8209;Ilnicki</span>
-          <span class="site-description">Third-Year Software Engineering Student</span>
+          <span class="name">Rafael&nbsp;Wiska&#8209;Ilnicki</span>
+          <span class="title">Third-Year Software Engineering Student</span>
         </h1>
 
         <div class="header-icons">
-          <a aria-label="Send email"
-            href="mailto:rafwiskailnicki@gmail.com">
+          <a href="mailto:rafwiskailnicki@gmail.com">
             <i class="icon fa fa-envelope"></i>
           </a>
-
-          <a aria-label="My Github" target="_blank"
-            href="https://github.com/rafaelwi">
-            <i class="icon fa fa-github-alt" aria-hidden="true"></i>
+          <a href="https://github.com/rafaelwi" target="_blank">
+            <i class="icon fa fa-github-alt"></i>
           </a>
         </div>
 
         <div class="header-links">
-          <a class="link" href="#about" data-scroll>About Me</a>
-          <a class="link" href="#projects" data-scroll>Projects</a>
-          <a class="link" href="/resume">Resume</a>
-          <a class="link" href="/blog">Blog</a>
+          <a href="#about" data-scroll>About Me</a>
+          <a href="#projects" data-scroll>Projects</a>
+          <a href="/resume">Resume</a>
+          <a href="/blog">Blog</a>
         </div>
       </div>
-      <a class="down" href="#about" data-scroll>
-        <i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
-    </div> <!-- particles -->
 
-    <section id="about">
-      <div class="user-details">
+      <a class="down" href="#about" data-scroll>
+        <i class="icon fa fa-chevron-down"></i>
+      </a>
+    </div>
+
+    <div class="contents">
+      <div class="about-me">
+        <section id="about"></section>
         <h1> About Me </h1>
         <p>Hi, I'm Rafael, a Third-Year Software Engineering Student
           with a Business Minor at the University of Guelph. I live in the 
-          Kitchener-Waterloo area. I have been interested in technology and programming
-          for a long time. In my free time, I like to work on my personal projects (which
-          you can find below), as well as reading and biking.
+          Kitchener-Waterloo area. I have been interested in technology and 
+          programming for a long time. In my free time, I like to work on my 
+          personal projects (which you can find below), as well as reading and 
+          biking.
           <br><br>I hope you enjoy my website and portfolio!</p>
       </div>
 
-      <div class="user">
-        <h2>Skills</h2>
-        <div class="tech">
+      <div class="skills">
+        <h1>My Skills</h1>
+        <div class="tech-skills">
           <i class="devicon-c-plain-wordmark colored"></i>
           <i class="devicon-python-plain colored"></i>
           <i class="devicon-java-plain colored"></i>
@@ -98,65 +99,63 @@
           <i class="devicon-linux-plain colored"></i>
         </div>
         <p>I have been programming since high school. Along the way, I've
-            learned C, Python, and Java, Go, and Node.js. I also have skills 
-            in Git, GNU/Linux, and MySQL. Currently, I'm learning C#. In the 
-            future, I'd like to learn C++.
+          learned C, Python, and Java, Go, and Node.js. I also have skills 
+          in Git, GNU/Linux, and MySQL. Currently, I'm learning C#. In the 
+          future, I'd like to learn C++.
         </p>
       </div>
-    </section>  <!-- about section -->
 
-    <section id="projects">
-      <div class="user-details">
-        <h1> My Projects </h1>
-      </div>
-
-      <div class="project-text-wrapper">
-        <p id="project-text">
+      <div class="projects">
+        <section id="projects"></section>
+        <h1>My Projects</h1>
+        <p class="projects-preface">
           A few things I've been working on in my free time.
           Most of my projects can be found on my 
-          <a href="https://github.com/rafaelwi" target="_blank"> Github.</a> 
-          These are my favourites.</p>
-      </div>
+          <a class="gh-link" href="https://github.com/rafaelwi" target="_blank"> Github.</a> 
+          These are my favourites.
+        </p>
 
-      <div class="project-button">
-          <a class="project-link" href="/projects">See all projects</a>
-        </div>
+        <a class="project-link" href="/projects">See all projects</a>
+        
+        <div class="card-row">
 
-      <!-- Project cards -->
-      <div class="row">
-        <div class="card" id="left-card">
-            <img alt="mountains" src="assets/img/sds.jpg" style="width:100%"/>
+          <div class="card" id="left-card">
+            <img alt="Stuff Discord Says Bot Image" src="assets/img/sds.jpg">
             <div class="card-text">
               <h4>SDS (Stuff Discord Says)</h4>
-              <p>A Discord bot that parrots users' messages, which can create
-                hilarious interactions. Built using Golang and currently hosted
-                on a Raspberry Pi.
+              <p>Discord bot that parrots users' messages at random, which create
+                hilarious interactions. Built using Golang, currently hosted
+                on a Raspberry Pi with over 100 users.
               </p>
               <div class="project-button">
                 <a class="project-link" href="https://github.com/rafaelwi/sds" 
                 target="_blank">Github Repo</a>
               </div>
             </div>
-        </div>
-
-        <div class="card" id="right-card">
-          <img alt="Dungeon Master GUI" src="assets/img/rwidm.jpg" style="width:100%"/>
-          <div class="card-text">
-            <h4>Dungeon Master</h4>
-            <p>The final assignment from my Object Oriented Programming class. 
-              A program that allows Dungeonmasters in <i>Dungeons and 
-              Dragons</i> create immersive dungeons. DMs can customize, 
-              visualize, and save their dungeon. Built using Java and JavaFX.
-            </p>
+          </div>
+  
+          <div class="card" id="right-card">
+            <img alt="Gunkstribute" src="assets/img/gunkstribute-2.png">
+            <div class="card-text">
+              <h4>Gunkstribute</h4>
+              <p>Distributed program that uses TensorFlow and AI to categorize and
+                rename images. Built using Node.js for the <a href="https://archive.is/qVTHL" target="_blank">Distributed 
+                Summer 2020 Hackaton</a>. <a href="https://devpost.com/software/gunkstribute-object-classification-using-dcp" target="_blank">Won first place.</a>
+              </p>
+              <div class="project-button">
+                <a class="project-link" href="https://github.com/wiwichips/gcb"
+                target="_blank">Github Repo</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div> <!-- end cards -->
-    </section>  <!-- projects section -->
+      </div>
+    </div>
 
     <script src="{{ "/assets/js/particles.min.js" | prepend: site.baseurl }}">
-      </script>
+    </script>
     <script src="{{ "/assets/js/sweet-scroll.min.js" |
-      prepend: site.baseurl }}"></script>
+    prepend: site.baseurl }}"></script>
     <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
   </body>
 </html>

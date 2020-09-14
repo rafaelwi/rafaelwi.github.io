@@ -6,7 +6,7 @@ body {
 
 .paper {
     width: 875px;
-    height: 1110px;
+    height: min(1110px, auto);
     position: relative;
     margin: 20px auto;
     padding-bottom: 40px;
@@ -91,14 +91,18 @@ body {
     display: none;
 }
 
+.more-projects {
+    padding-bottom: 7px;
+}
+
 .projects p {
     padding-top: 3px;
 }
 
-.projects a {
-    border-bottom: 1px dotted;
-    text-decoration: none;
-    font-weight: bold;
+.projects a{
+    border-bottom: 1px dotted !important;
+    text-decoration: none !important;
+    color: #000 !important;
 }
 
 .projects a:hover {
@@ -119,6 +123,50 @@ body {
     text-align: right;
 }
 
+input[type='checkbox'] {
+    display: none;
+}
+
+.toggle-label {
+    font-variant: small-caps;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    position: relative;
+}
+
+.collapsible-content {
+    visibility: hidden;
+    overflow: hidden;
+    display: none;
+}
+
+#mwe-collapsible-toggle:checked + #mwe-toggle-label:after {
+    content: "Less Work Experience ▲";
+}
+
+#mwe-collapsible-toggle:checked + #mwe-toggle-label + .collapsible-content,
+#mp-collapsible-toggle:checked + #mp-toggle-label + .collapsible-content {
+    visibility: visible;
+    display: block;
+}
+
+.collapsible-toggle:checked + .toggle-label:after {
+    position: absolute;
+    inset: 0; /* TODO: When usage of this becomes more common, remove the
+    top, left, right, bottom lines */
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: white;
+}
+
+.more-projects {
+    padding-top: 7px;
+}
+
+#mp-collapsible-toggle:checked + #mp-toggle-label:after {
+    content: "Less Projects ▲";
+}
 
 @media only screen and (max-width: 875px) {
     .paper {
