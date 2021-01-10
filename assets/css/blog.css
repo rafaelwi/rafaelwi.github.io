@@ -1,5 +1,8 @@
 .blog-content {
-    margin: auto 15%;
+    margin: auto;
+    max-width: 800px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 html {
