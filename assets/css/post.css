@@ -3,6 +3,10 @@
     src: url("../fonts/unifont.woff2");
 }
 
+html {
+    background-color: #eeeeee;
+}
+
 .post-content {
     margin: auto 15%;
     line-height: 1.6;

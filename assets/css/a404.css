@@ -3,6 +3,10 @@
     src: url("../fonts/unifont.woff2");
 }
 
+html {
+    background-color: #eeeeee;
+}
+
 #a404-head, #a404-text, #a404-link {
     font-family: "unifont";
 }

@@ -2,6 +2,10 @@
     margin: auto 15%;
 }
 
+html {
+    background-color: #eeeeee;
+}
+
 a {
     color: #2e3440;
     text-decoration: underline dotted;
@@ -20,3 +24,4 @@ a {
 hr {
     border: 0.5px solid gainsboro;
 }
+
