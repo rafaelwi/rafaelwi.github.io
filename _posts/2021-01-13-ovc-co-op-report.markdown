@@ -3,6 +3,7 @@ layout: post
 title: "The Dog Days of Summer - My Co-op with the OVC"
 date:   2021-01-14 04:00:00 -0400
 permalink: /blog/ovc-co-op-report
+excerpt: My reflection on my two terms working under the Ontario Veterinary College (OVC)
 ---
 ### Introduction
 This post is a reflection on my two terms working under the Ontario Veterinary
