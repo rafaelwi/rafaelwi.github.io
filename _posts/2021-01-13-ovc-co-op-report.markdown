@@ -7,7 +7,7 @@ excerpt: My reflection on my two terms working under the Ontario Veterinary Coll
 ---
 ### Introduction
 This post is a reflection on my two terms working under the Ontario Veterinary
-College (OVC). I was supervised under Taylor Scully, a Learning Pathways
+College (OVC). My supervisor was Taylor Scully, a Learning Pathways
 Officer for students studying Veterinary Medicine.
 
 ### About the OVC
@@ -16,7 +16,7 @@ on the University of Guelph’s campus. Established in 1862, [the OVC ranked 5th
 in the world for Veterinary Medicine by QS World University Rankings.][ranking]
 
 ![ovc]
-*The main building of the Ontario Veterinary College*
+*The Ontario Veterinary College Main Building, Guelph, ON*
 
 ### Job Description
 As Richard Riley, former US Secretary of Education said “as students complete 
@@ -53,12 +53,12 @@ Pedagogy*
 
 One aspect that motivated me to work for the OVC was being able to receive 
 certification in Course Redesign and Remote Pedagogy. By understanding how 
-courses are constructed, I can become a better teaching assistant because it 
+courses are constructed, I will be a better teaching assistant because it 
 taught me how students learn and think. In order to accomplish this goal, I had
 to plan ahead and set time aside to work on the course and absorb the material. 
 
 ![award]
-*I completed the Remote Pedagogy course. One goal down.*
+*I successfully completed the Remote Pedagogy course. One goal down!*
 
 - Learn new techniques and skills in video editing using Adobe Premiere
 
@@ -107,7 +107,7 @@ and met my deadlines, making sure that professors had sufficient time to review
 the work and request changes as needed, implementing SCRUM-like workflow. 
 
 ![jellybean]
-*The students were just as happy as Jellybean here was about my work*
+*The students were just as happy as Jellybean was about my work*
 
 ### Conclusion
 My work terms at the OVC were unconventional because my role and work that I 
