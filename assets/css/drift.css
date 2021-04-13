@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+    background-color: #eeeeee;
+}
+
+body {
+    font-family: 'PT Sans',sans-serif;
+    margin: 0;
+}
+
+
+.main-sect {
+    max-width: 90%;
+    padding: 0% 10% 10% 10%;
+    text-align: center;
+}
