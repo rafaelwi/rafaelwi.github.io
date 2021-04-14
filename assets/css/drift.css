@@ -15,3 +15,8 @@ body {
     padding: 0% 10% 10% 10%;
     text-align: center;
 }
+
+#gp-btns {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
