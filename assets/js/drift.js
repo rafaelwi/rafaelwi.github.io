@@ -1,5 +1,7 @@
 var gpi = document.getElementById("gp-info")
 var gpb = document.getElementById("gp-btns")
+var leftJoystick = document.getElementById("left-joystick-pos")
+var rightJoystick = document.getElementById("right-joystick-pos")
 var gpbs = ""
 var haveEvents = 'GamepadEvent' in window
 var haveWebkitEvents = 'WebKitGamepadEvent' in window
@@ -47,15 +49,38 @@ function updateGamepadStatus() {
             gpbs += "Button " + i + " value: " + b.value + "<br>"
         }
 
-        // Vibrate based on LT's value
-        if (gp.buttons[6].value > 0.12) { 
-            vibrate(gp, gp.buttons[6].value) 
+        // Update joystick positions
+        leftJoystick.style.left  = calcJoystick(gp.axes[0])
+        leftJoystick.style.top   = calcJoystick(gp.axes[1])
+        rightJoystick.style.left = calcJoystick(gp.axes[2])
+        rightJoystick.style.top  = calcJoystick(gp.axes[3])
+
+        // Update left joystick indicator colors
+        if ((gp.axes[0] > -0.01 && gp.axes[0] < 0.01) && (gp.axes[1] > -0.01 && gp.axes[1] < 0.01)) {
+            leftJoystick.style.background = "chartreuse"
+        } else if ((gp.axes[0] > -0.05 && gp.axes[0] < 0.05) && (gp.axes[1] > -0.05 && gp.axes[1] < 0.05)) {
+            leftJoystick.style.background = "gold"
+        } else if (gp.axes[0] == -1 || gp.axes[0] == 1 || gp.axes[1] == -1 || gp.axes[1] == 1) {
+            leftJoystick.style.background = "red"
         } else {
-            vibrate(gp, 0.0)
+            leftJoystick.style.background = "black"
         }
 
-        // Vibrate stop
-        if (gp.buttons[1].value == 1) { vibrate(gp, 0.0) }
+        // Update right joystick indicator colors
+        if ((gp.axes[2] > -0.01 && gp.axes[2] < 0.01) && (gp.axes[3] > -0.01 && gp.axes[3] < 0.01)) {
+            rightJoystick.style.background = "chartreuse"
+        } else if ((gp.axes[2] > -0.05 && gp.axes[2] < 0.05) && (gp.axes[3] > -0.05 && gp.axes[3] < 0.05)) {
+            rightJoystick.style.background = "gold"
+        } else if (gp.axes[2] == -1 || gp.axes[2] == 1 || gp.axes[3] == -1 || gp.axes[3] == 1) {
+            rightJoystick.style.background = "red"
+        } else {
+            rightJoystick.style.background = "black"
+        }
+
+        // Vibrate based on LT's value
+        if (gp.buttons[6].value > 0.0) { 
+            vibrate(gp, gp.buttons[6].value) 
+        }
     }
     
     // Print results
@@ -83,6 +108,11 @@ function vibrate(gp, val) {
           strongMagnitude: val
         })
     }
+}
+
+// Calculates the position of the joystick for the indicator
+function calcJoystick(pos) {
+    return pos * 50 + 50 + "%"
 }
 
 /// The "Main"
