@@ -7,6 +7,12 @@ var dpadLeft  = document.getElementById("gp14")
 var dpadRight = document.getElementById("gp15")
 var dpad = [dpadUp, dpadDown, dpadLeft, dpadRight]
 
+var btnA = document.getElementById("gp0")
+var btnB = document.getElementById("gp1")
+var btnX = document.getElementById("gp2")
+var btnY = document.getElementById("gp3")
+var abxy = [btnA, btnB, btnX, btnY]
+
 var leftJoystick = document.getElementById("left-joystick-pos")
 var rightJoystick = document.getElementById("right-joystick-pos")
 var gpbs = ""
@@ -95,6 +101,15 @@ function updateGamepadStatus() {
                 dpad[i-12].setAttributeNS(null, 'fill', 'chartreuse')
             } else {
                 dpad[i-12].setAttributeNS(null, 'fill', 'lightgray')
+            }
+        }
+
+        // Colour the ABXY buttons (0-3)
+        for (var i = 0; i <= 3; i++) {
+            if (gp.buttons[i].value == 1) {
+                abxy[i].setAttributeNS(null, "fill-opacity", "1")
+            } else {
+                abxy[i].setAttributeNS(null, "fill-opacity", "0.25")
             }
         }
     }
