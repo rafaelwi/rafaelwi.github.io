@@ -1,5 +1,12 @@
 var gpi = document.getElementById("gp-info")
 var gpb = document.getElementById("gp-btns")
+
+var dpadUp    = document.getElementById("gp12")
+var dpadDown  = document.getElementById("gp13")
+var dpadLeft  = document.getElementById("gp14")
+var dpadRight = document.getElementById("gp15")
+var dpad = [dpadUp, dpadDown, dpadLeft, dpadRight]
+
 var leftJoystick = document.getElementById("left-joystick-pos")
 var rightJoystick = document.getElementById("right-joystick-pos")
 var gpbs = ""
@@ -9,21 +16,21 @@ var reqAniFrame = window.mozRequestAnimationFrame || window.requestAnimationFram
 var gamepads = []
 
 function gamepadConnectionHandler(e, connecting) {
-  var gamepad = e.gamepad
+    var gamepad = e.gamepad
 
-  if (connecting) {
-    gamepads[gamepad.index] = gamepad
-    gpi.innerHTML = "Gamepad #" + gamepad.index + ": " + gamepad.id + " connected! " +
-        gamepad.buttons.length + " buttons and " + gamepad.axes.length + " axes"
+    if (connecting) {
+        gamepads[gamepad.index] = gamepad
+        gpi.innerHTML = "Gamepad #" + gamepad.index + ": " + gamepad.id + " connected! " +
+            gamepad.buttons.length + " buttons and " + gamepad.axes.length + " axes"
 
-    // Update ibration tester button and start updating values
-    document.getElementById("testVibrate").setAttribute( "onClick", "vibrate(gamepads[0], 1.0)" )
-    document.getElementById("testVibrate").removeAttribute("hidden")
-    reqAniFrame(updateGamepadStatus)
-  } else {
-    gpi.innerHTML = "Gamepad #" + gamepad.index + ": " + gamepad.id + " disconnected"
-    delete gamepads[gamepad.index]
-  }
+        // Update ibration tester button and start updating values
+        document.getElementById("testVibrate").setAttribute( "onClick", "vibrate(gamepads[0], 1.0)" )
+        document.getElementById("testVibrate").removeAttribute("hidden")
+        reqAniFrame(updateGamepadStatus)
+    } else {
+        gpi.innerHTML = "Gamepad #" + gamepad.index + ": " + gamepad.id + " disconnected"
+        delete gamepads[gamepad.index]
+    }
 }
 
 function updateGamepadStatus() {
@@ -78,11 +85,20 @@ function updateGamepadStatus() {
         }
 
         // Vibrate based on LT's value
-        if (gp.buttons[6].value > 0.0) { 
-            vibrate(gp, gp.buttons[6].value) 
+        if (gp.buttons[6].value > 0.0) {
+            vibrate(gp, gp.buttons[6].value)
+        }
+
+        // Colour the dpad (buttons 12-15)
+        for (var i = 12; i <= 15; i++) {
+            if (gp.buttons[i].value == 1) {
+                dpad[i-12].setAttributeNS(null, 'fill', 'chartreuse')
+            } else {
+                dpad[i-12].setAttributeNS(null, 'fill', 'lightgray')
+            }
         }
     }
-    
+
     // Print results
     gpb.innerHTML = gpbs
     reqAniFrame(updateGamepadStatus)
