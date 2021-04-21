@@ -1,3 +1,25 @@
+// Constructor for GamepadButton object
+class MyGamepadButton {
+    constructor(gpid, newSvgId, successFunc, failureFunc) {
+        this.id = gpid
+        this.svgID = newSvgId
+        this.onSuccess = successFunc.bind(this)
+        this.onFailure = function() { failureFunc() }
+    }
+
+    changeFillColour(newColour) {
+        this.svgID.setAttribute("fill", newColour)
+    }
+
+    helloworld() {
+        console.log("hello world from " + this.svgID)
+    }
+}
+
+function changeColour(gpBtn, colour) {
+    gpBtn.svgID.setAttribute("fill", colour)
+}
+
 var gpi = document.getElementById("gp-info")
 var gpb = document.getElementById("gp-btns")
 
@@ -24,6 +46,14 @@ var backBtn    = document.getElementById("gp8")
 var startBtn   = document.getElementById("gp9")
 var gamebarBtn = document.getElementById("gp16")
 var gamepadMenu = [backBtn, startBtn]
+
+// Create an array of GamepadButton objects
+var button0 = new MyGamepadButton(0, this.document.getElementById("gp0"), 
+    function() { this.changeFillColour("gray") }.bind(this), function() { this.changeFillColour("lightgray")}.bind(this))
+var button1 = new MyGamepadButton(1, this.document.getElementById("gp1"), 
+    function() {this.helloworld()}, function() { this.changeFillColour("lightgray")}.bind(this))
+var buttons = [button0, button1]
+
 
 var leftJoystick = document.getElementById("left-joystick-pos")
 var rightJoystick = document.getElementById("right-joystick-pos")
@@ -129,11 +159,20 @@ function updateGamepadStatus() {
         }
 
         // Colour the ABXY buttons (0-3)
-        for ([i, e] of abxy.entries()) {
+        /*for ([i, e] of abxy.entries()) {
             if (gp.buttons[i].value == 1) {
                 e.setAttributeNS(null, "fill-opacity", "1")
             } else {
                 e.setAttributeNS(null, "fill-opacity", "0.25")
+            }
+        }*/
+
+        for ([i, e] of buttons.entries()) {
+            if (gp.buttons[e.id].value == 1) {
+                console.log(e.onSuccess)
+                e.onSuccess()
+            } else {
+                e.onFailure
             }
         }
 
@@ -172,6 +211,9 @@ function updateGamepadStatus() {
     gpb.innerHTML = gpbs
     reqAniFrame(updateGamepadStatus)
 }
+
+
+
 
 // Polls for gamepads
 function scanForGamepads() {
