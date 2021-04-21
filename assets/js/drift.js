@@ -13,8 +13,22 @@ var btnX = document.getElementById("gp2")
 var btnY = document.getElementById("gp3")
 var abxy = [btnA, btnB, btnX, btnY]
 
+var lb = document.getElementById("gp4")
+var rb = document.getElementById("gp5")
+var lt = document.getElementById("gp6")
+var rt = document.getElementById("gp7")
+var shoulderButtons = [lb, rb]
+var triggers = [lt, rt]
+
+var backBtn    = document.getElementById("gp8")
+var startBtn   = document.getElementById("gp9")
+var gamebarBtn = document.getElementById("gp16")
+var gamepadMenu = [backBtn, startBtn]
+
 var leftJoystick = document.getElementById("left-joystick-pos")
 var rightJoystick = document.getElementById("right-joystick-pos")
+var joysticks = [leftJoystick, rightJoystick]
+
 var gpbs = ""
 var haveEvents = 'GamepadEvent' in window
 var haveWebkitEvents = 'WebKitGamepadEvent' in window
@@ -76,7 +90,7 @@ function updateGamepadStatus() {
         } else if (gp.axes[0] == -1 || gp.axes[0] == 1 || gp.axes[1] == -1 || gp.axes[1] == 1) {
             leftJoystick.style.background = "red"
         } else {
-            leftJoystick.style.background = "black"
+            leftJoystick.style.background = "white"
         }
 
         // Update right joystick indicator colors
@@ -87,7 +101,7 @@ function updateGamepadStatus() {
         } else if (gp.axes[2] == -1 || gp.axes[2] == 1 || gp.axes[3] == -1 || gp.axes[3] == 1) {
             rightJoystick.style.background = "red"
         } else {
-            rightJoystick.style.background = "black"
+            rightJoystick.style.background = "white"
         }
 
         // Vibrate based on LT's value
@@ -95,22 +109,62 @@ function updateGamepadStatus() {
             vibrate(gp, gp.buttons[6].value)
         }
 
-        // Colour the dpad (buttons 12-15)
-        for (var i = 12; i <= 15; i++) {
-            if (gp.buttons[i].value == 1) {
-                dpad[i-12].setAttributeNS(null, 'fill', 'chartreuse')
+        // Colour the joystick indicators
+        for ([i, e] of joysticks.entries()) {
+            if (gp.buttons[i+10].value == 1) {
+                e.style.border = "5px solid black"
             } else {
-                dpad[i-12].setAttributeNS(null, 'fill', 'lightgray')
+                e.style.border = "5px solid lightgray"
+            }
+        }
+
+
+        // Colour the dpad (buttons 12-15)
+        for ([i, e] of dpad.entries()) {
+            if (gp.buttons[i+12].value == 1) {
+                e.setAttributeNS(null, 'fill', 'chartreuse')
+            } else {
+                e.setAttributeNS(null, 'fill', 'lightgray')
             }
         }
 
         // Colour the ABXY buttons (0-3)
-        for (var i = 0; i <= 3; i++) {
+        for ([i, e] of abxy.entries()) {
             if (gp.buttons[i].value == 1) {
-                abxy[i].setAttributeNS(null, "fill-opacity", "1")
+                e.setAttributeNS(null, "fill-opacity", "1")
             } else {
-                abxy[i].setAttributeNS(null, "fill-opacity", "0.25")
+                e.setAttributeNS(null, "fill-opacity", "0.25")
             }
+        }
+
+        // Colour the shoulder buttons
+        for ([i, e] of shoulderButtons.entries()) {
+            if (gp.buttons[i+4].value == 1) {
+                e.setAttributeNS(null, "fill", "gray")
+            } else {
+                e.setAttributeNS(null, "fill", "lightgray")
+            }
+        }
+
+        // Colour the triggers
+        for ([i, e] of triggers.entries()) {
+            e.setAttribute("fill-opacity", gp.buttons[i+6].value)
+        }
+
+        // Colour the gamepad menu buttons
+        for ([i, e] of gamepadMenu.entries()) {
+            if (gp.buttons[i+8].value == 1) {
+                e.setAttribute("fill", "gray")
+            } else {
+                e.setAttribute("fill", "lightgray")
+            }
+        }
+
+        // Colour the X button
+        if (gp.buttons[16].value == 1) {
+            gamebarBtn.setAttribute("fill", "gray")
+        } else {
+            gamebarBtn.setAttribute("fill", "lightgray")
         }
     }
 
