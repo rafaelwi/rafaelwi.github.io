@@ -7,96 +7,37 @@ class MyGamepadButton {
         this.onFailure = failureFunc.bind(this)
     }
 
-    setFillColour(colour) {
-        this.svgID.setAttribute("fill", colour)
-    }
-
-    setFillOpacity(opacity) {
-        this.svgID.setAttribute("fill-opacity", opacity)
-    }
-
-    setBorderStyle(myStyle) {
-        this.svgID.style.border = myStyle
-    }
+    setFillColour(colour)   { this.svgID.setAttribute("fill", colour) }
+    setFillOpacity(opacity) { this.svgID.setAttribute("fill-opacity", opacity) }
+    setBorderStyle(myStyle) { this.svgID.style.border = myStyle }
 }
 
 var gpi = document.getElementById("gp-info")
 var gpb = document.getElementById("gp-btns")
 var lt = document.getElementById("gp6")
 var rt = document.getElementById("gp7")
-var triggers = [lt, rt]
 
 // Create an array of GamepadButton objects
-var button0 = new MyGamepadButton(0, "gp0", 
-    function() {this.setFillOpacity("1")},
-    function() {this.setFillOpacity("0.25")}
-)
-var button1 = new MyGamepadButton(1, "gp1", 
-    function() {this.setFillOpacity("1")}, 
-    function() {this.setFillOpacity("0.25")}
-)
-var button2 = new MyGamepadButton(2, "gp2", 
-    function() {this.setFillOpacity("1")}, 
-    function() {this.setFillOpacity("0.25")}
-)
-var button3 = new MyGamepadButton(3, "gp3", 
-    function() {this.setFillOpacity("1")}, 
-    function() {this.setFillOpacity("0.25")}
-)
-
-var button4 = new MyGamepadButton(4, "gp4", 
-    function() {this.setFillColour("gray")}, 
-    function() {this.setFillColour("lightgray")}
-)
-var button5 = new MyGamepadButton(5, "gp5", 
-    function() {this.setFillColour("gray")}, 
-    function() {this.setFillColour("lightgray")}
-)
-
-var button8 = new MyGamepadButton(8, "gp8", 
-    function() {this.setFillColour("gray")}, 
-    function() {this.setFillColour("lightgray")}
-)
-var button9 = new MyGamepadButton(9, "gp9", 
-    function() {this.setFillColour("gray")}, 
-    function() {this.setFillColour("lightgray")}
-)
-
-var button10 = new MyGamepadButton(10, "left-joystick-pos",
-    function() {this.setBorderStyle("5px solid black")},
-    function() {this.setBorderStyle("5px solid lightgray")}
-)
-var button11 = new MyGamepadButton(11, "right-joystick-pos",
-    function() {this.setBorderStyle("5px solid black")},
-    function() {this.setBorderStyle("5px solid lightgray")}
-)
-
-var button12 = new MyGamepadButton(12, "gp12", 
-    function() {this.setFillColour("chartreuse")}, 
-    function() {this.setFillColour("lightgray")}
-)
-var button13 = new MyGamepadButton(13, "gp13", 
-    function() {this.setFillColour("chartreuse")}, 
-    function() {this.setFillColour("lightgray")}
-)
-var button14 = new MyGamepadButton(14, "gp14", 
-    function() {this.setFillColour("chartreuse")}, 
-    function() {this.setFillColour("lightgray")}
-)
-var button15 = new MyGamepadButton(15, "gp15", 
-    function() {this.setFillColour("chartreuse")}, 
-    function() {this.setFillColour("lightgray")}
-)
-
-var button16 = new MyGamepadButton(16, "gp16", 
-function() {this.setFillColour("gray")}, 
-function() {this.setFillColour("lightgray")}
-)
-var buttons = [button0, button1, button2, button3, button4, button5, button8, button9, button10, button11, button12, button13, button14, button15, button16]
+var buttons = [
+    new MyGamepadButton(0, "gp0", function() {this.setFillOpacity("1")}, function() {this.setFillOpacity("0.25")}), 
+    new MyGamepadButton(1, "gp1", function() {this.setFillOpacity("1")}, function() {this.setFillOpacity("0.25")}), 
+    new MyGamepadButton(2, "gp2", function() {this.setFillOpacity("1")}, function() {this.setFillOpacity("0.25")}), 
+    new MyGamepadButton(3, "gp3", function() {this.setFillOpacity("1")}, function() {this.setFillOpacity("0.25")}), 
+    new MyGamepadButton(4, "gp4", function() {this.setFillColour("gray")}, function() {this.setFillColour("lightgray")}), 
+    new MyGamepadButton(5, "gp5", function() {this.setFillColour("gray")}, function() {this.setFillColour("lightgray")}), 
+    new MyGamepadButton(8, "gp8", function() {this.setFillColour("gray")}, function() {this.setFillColour("lightgray")}), 
+    new MyGamepadButton(9, "gp9", function() {this.setFillColour("gray")}, function() {this.setFillColour("lightgray")}), 
+    new MyGamepadButton(10, "left-joystick-pos", function() {this.setBorderStyle("5px solid black")}, function() {this.setBorderStyle("5px solid lightgray")}), 
+    new MyGamepadButton(11, "right-joystick-pos", function() {this.setBorderStyle("5px solid black")}, function() {this.setBorderStyle("5px solid lightgray")}), 
+    new MyGamepadButton(12, "gp12", function() {this.setFillColour("chartreuse")}, function() {this.setFillColour("lightgray")}), 
+    new MyGamepadButton(13, "gp13", function() {this.setFillColour("chartreuse")}, function() {this.setFillColour("lightgray")}), 
+    new MyGamepadButton(14, "gp14", function() {this.setFillColour("chartreuse")}, function() {this.setFillColour("lightgray")}), 
+    new MyGamepadButton(15, "gp15", function() {this.setFillColour("chartreuse")}, function() {this.setFillColour("lightgray")}), 
+    new MyGamepadButton(16, "gp16", function() {this.setFillColour("gray")}, function() {this.setFillColour("lightgray")})
+]
 
 var leftJoystick = document.getElementById("left-joystick-pos")
 var rightJoystick = document.getElementById("right-joystick-pos")
-var joysticks = [leftJoystick, rightJoystick]
 
 var gpbs = ""
 var haveEvents = 'GamepadEvent' in window
@@ -123,12 +64,10 @@ function gamepadConnectionHandler(e, connecting) {
 }
 
 function updateGamepadStatus() {
-    // Reset
+    // Reset an d check all gamepads
     gpbs = ""
-    gpb.innerHTML = ""
-
-    // Check all gamepads
     scanForGamepads()
+    
     for (gp of gamepads) {
         // Check all axes
         for ([i,a] of gp.axes.entries()) {
@@ -173,15 +112,10 @@ function updateGamepadStatus() {
             rightJoystick.style.background = "white"
         }
 
-        // Vibrate based on LT's value
-        if (gp.buttons[6].value > 0.0) {
-            vibrate(gp, gp.buttons[6].value)
-        }
-
-        // Colour the triggers
-        for ([i, e] of triggers.entries()) {
-            e.setAttribute("fill-opacity", gp.buttons[i+6].value)
-        }
+        // Vibrate based on LT's value and colour triggers
+        (gp.buttons[6].value > 0.0) ? vibrate(gp, gp.buttons[6].value) : null
+        lt.setAttribute("fill-opacity", gp.buttons[6].value)
+        rt.setAttribute("fill-opacity", gp.buttons[7].value)
 
         // Run through all of the functions of the buttons
         for ([i, e] of buttons.entries()) {
@@ -208,10 +142,7 @@ function scanForGamepads() {
 function vibrate(gp, val) {
     if (gp && gp.vibrationActuator) {
         gp.vibrationActuator.playEffect("dual-rumble", {
-          startDelay: 0,
-          duration: 1000,
-          weakMagnitude: val,
-          strongMagnitude: val
+          startDelay: 0, duration: 1000, weakMagnitude: val, strongMagnitude: val
         })
     }
 }
