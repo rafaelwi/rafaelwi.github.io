@@ -2,58 +2,97 @@
 class MyGamepadButton {
     constructor(gpid, newSvgId, successFunc, failureFunc) {
         this.id = gpid
-        this.svgID = newSvgId
+        this.svgID = document.getElementById(newSvgId)
         this.onSuccess = successFunc.bind(this)
-        this.onFailure = function() { failureFunc() }
+        this.onFailure = failureFunc.bind(this)
     }
 
-    changeFillColour(newColour) {
-        this.svgID.setAttribute("fill", newColour)
+    setFillColour(colour) {
+        this.svgID.setAttribute("fill", colour)
     }
 
-    helloworld() {
-        console.log("hello world from " + this.svgID)
+    setFillOpacity(opacity) {
+        this.svgID.setAttribute("fill-opacity", opacity)
     }
-}
 
-function changeColour(gpBtn, colour) {
-    gpBtn.svgID.setAttribute("fill", colour)
+    setBorderStyle(myStyle) {
+        this.svgID.style.border = myStyle
+    }
 }
 
 var gpi = document.getElementById("gp-info")
 var gpb = document.getElementById("gp-btns")
-
-var dpadUp    = document.getElementById("gp12")
-var dpadDown  = document.getElementById("gp13")
-var dpadLeft  = document.getElementById("gp14")
-var dpadRight = document.getElementById("gp15")
-var dpad = [dpadUp, dpadDown, dpadLeft, dpadRight]
-
-var btnA = document.getElementById("gp0")
-var btnB = document.getElementById("gp1")
-var btnX = document.getElementById("gp2")
-var btnY = document.getElementById("gp3")
-var abxy = [btnA, btnB, btnX, btnY]
-
-var lb = document.getElementById("gp4")
-var rb = document.getElementById("gp5")
 var lt = document.getElementById("gp6")
 var rt = document.getElementById("gp7")
-var shoulderButtons = [lb, rb]
 var triggers = [lt, rt]
 
-var backBtn    = document.getElementById("gp8")
-var startBtn   = document.getElementById("gp9")
-var gamebarBtn = document.getElementById("gp16")
-var gamepadMenu = [backBtn, startBtn]
-
 // Create an array of GamepadButton objects
-var button0 = new MyGamepadButton(0, this.document.getElementById("gp0"), 
-    function() { this.changeFillColour("gray") }.bind(this), function() { this.changeFillColour("lightgray")}.bind(this))
-var button1 = new MyGamepadButton(1, this.document.getElementById("gp1"), 
-    function() {this.helloworld()}, function() { this.changeFillColour("lightgray")}.bind(this))
-var buttons = [button0, button1]
+var button0 = new MyGamepadButton(0, "gp0", 
+    function() {this.setFillOpacity("1")},
+    function() {this.setFillOpacity("0.25")}
+)
+var button1 = new MyGamepadButton(1, "gp1", 
+    function() {this.setFillOpacity("1")}, 
+    function() {this.setFillOpacity("0.25")}
+)
+var button2 = new MyGamepadButton(2, "gp2", 
+    function() {this.setFillOpacity("1")}, 
+    function() {this.setFillOpacity("0.25")}
+)
+var button3 = new MyGamepadButton(3, "gp3", 
+    function() {this.setFillOpacity("1")}, 
+    function() {this.setFillOpacity("0.25")}
+)
 
+var button4 = new MyGamepadButton(4, "gp4", 
+    function() {this.setFillColour("gray")}, 
+    function() {this.setFillColour("lightgray")}
+)
+var button5 = new MyGamepadButton(5, "gp5", 
+    function() {this.setFillColour("gray")}, 
+    function() {this.setFillColour("lightgray")}
+)
+
+var button8 = new MyGamepadButton(8, "gp8", 
+    function() {this.setFillColour("gray")}, 
+    function() {this.setFillColour("lightgray")}
+)
+var button9 = new MyGamepadButton(9, "gp9", 
+    function() {this.setFillColour("gray")}, 
+    function() {this.setFillColour("lightgray")}
+)
+
+var button10 = new MyGamepadButton(10, "left-joystick-pos",
+    function() {this.setBorderStyle("5px solid black")},
+    function() {this.setBorderStyle("5px solid lightgray")}
+)
+var button11 = new MyGamepadButton(11, "right-joystick-pos",
+    function() {this.setBorderStyle("5px solid black")},
+    function() {this.setBorderStyle("5px solid lightgray")}
+)
+
+var button12 = new MyGamepadButton(12, "gp12", 
+    function() {this.setFillColour("chartreuse")}, 
+    function() {this.setFillColour("lightgray")}
+)
+var button13 = new MyGamepadButton(13, "gp13", 
+    function() {this.setFillColour("chartreuse")}, 
+    function() {this.setFillColour("lightgray")}
+)
+var button14 = new MyGamepadButton(14, "gp14", 
+    function() {this.setFillColour("chartreuse")}, 
+    function() {this.setFillColour("lightgray")}
+)
+var button15 = new MyGamepadButton(15, "gp15", 
+    function() {this.setFillColour("chartreuse")}, 
+    function() {this.setFillColour("lightgray")}
+)
+
+var button16 = new MyGamepadButton(16, "gp16", 
+function() {this.setFillColour("gray")}, 
+function() {this.setFillColour("lightgray")}
+)
+var buttons = [button0, button1, button2, button3, button4, button5, button8, button9, button10, button11, button12, button13, button14, button15, button16]
 
 var leftJoystick = document.getElementById("left-joystick-pos")
 var rightJoystick = document.getElementById("right-joystick-pos")
@@ -139,71 +178,14 @@ function updateGamepadStatus() {
             vibrate(gp, gp.buttons[6].value)
         }
 
-        // Colour the joystick indicators
-        for ([i, e] of joysticks.entries()) {
-            if (gp.buttons[i+10].value == 1) {
-                e.style.border = "5px solid black"
-            } else {
-                e.style.border = "5px solid lightgray"
-            }
-        }
-
-
-        // Colour the dpad (buttons 12-15)
-        for ([i, e] of dpad.entries()) {
-            if (gp.buttons[i+12].value == 1) {
-                e.setAttributeNS(null, 'fill', 'chartreuse')
-            } else {
-                e.setAttributeNS(null, 'fill', 'lightgray')
-            }
-        }
-
-        // Colour the ABXY buttons (0-3)
-        /*for ([i, e] of abxy.entries()) {
-            if (gp.buttons[i].value == 1) {
-                e.setAttributeNS(null, "fill-opacity", "1")
-            } else {
-                e.setAttributeNS(null, "fill-opacity", "0.25")
-            }
-        }*/
-
-        for ([i, e] of buttons.entries()) {
-            if (gp.buttons[e.id].value == 1) {
-                console.log(e.onSuccess)
-                e.onSuccess()
-            } else {
-                e.onFailure
-            }
-        }
-
-        // Colour the shoulder buttons
-        for ([i, e] of shoulderButtons.entries()) {
-            if (gp.buttons[i+4].value == 1) {
-                e.setAttributeNS(null, "fill", "gray")
-            } else {
-                e.setAttributeNS(null, "fill", "lightgray")
-            }
-        }
-
         // Colour the triggers
         for ([i, e] of triggers.entries()) {
             e.setAttribute("fill-opacity", gp.buttons[i+6].value)
         }
 
-        // Colour the gamepad menu buttons
-        for ([i, e] of gamepadMenu.entries()) {
-            if (gp.buttons[i+8].value == 1) {
-                e.setAttribute("fill", "gray")
-            } else {
-                e.setAttribute("fill", "lightgray")
-            }
-        }
-
-        // Colour the X button
-        if (gp.buttons[16].value == 1) {
-            gamebarBtn.setAttribute("fill", "gray")
-        } else {
-            gamebarBtn.setAttribute("fill", "lightgray")
+        // Run through all of the functions of the buttons
+        for ([i, e] of buttons.entries()) {
+            (gp.buttons[e.id].value == 1) ? e.onSuccess() : e.onFailure()
         }
     }
 
@@ -211,9 +193,6 @@ function updateGamepadStatus() {
     gpb.innerHTML = gpbs
     reqAniFrame(updateGamepadStatus)
 }
-
-
-
 
 // Polls for gamepads
 function scanForGamepads() {
