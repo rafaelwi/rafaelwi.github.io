@@ -31,7 +31,7 @@
     sUXOH1dXV1lrheSTip5jCloI4qgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" rel="icon" type="image/x-icon"/>
 
-    <title>Blog | Rafael Wiska-Ilnicki</title>
+    <title>Controller/Gamepad Tester | Rafael Wiska-Ilnicki</title>
 
     <meta name="description" content="My musings.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,7 @@
       
     <!-- BEGIN HEADER -->
     <header class="navbar">
-      <a href="/" class="logo earl">Controller Tester</a>
+      <a href="/" class="logo earl">Rafael Wiska-Ilnicki</a>
       <input class="menu-btn" type="checkbox" id="menu-btn"/>
       <label class="menu-icon" for="menu-btn">
         <span class="navicon"></span>
@@ -60,65 +60,68 @@
     <!-- END HEADER -->
 
     <div class="main-sect">
-      <h2>Hello world</h2>
+      <h1>Controller/Gamepad Tester</h1>
       <button id="testVibrate" onclick="dummy()" hidden>Test Vibration</button>
 
-      <br/>
-
-      <div id="left-joystick" class="joystick">
-        <div class="x-axis"></div>
-        <div class="y-axis"></div>
-        <div class="joystick-outline"></div>
-        <div id="left-joystick-pos" class="joystick-pos"></div>
-      </div>
-
-      <div id="right-joystick" class="joystick">
-        <div class="x-axis"></div>
-        <div class="y-axis"></div>
-        <div class="joystick-outline"></div>
-        <div id="right-joystick-pos" class="joystick-pos"></div>
-      </div>
-
-      <div id="gamepad-menu-container">
-        <svg id="gp-menu" width="300" height="100">
-          <rect id="gp8" x="25"  y="40" width="50" height="30" rx="15" stroke="black" stroke-width="1" fill="lightgray" />
-          <rect id="gp9" x="225" y="40" width="50" height="30" rx="15" stroke="black" stroke-width="1" fill="lightgray" />
-          <circle id="gp16" cx="150" cy="50" r="50" stroke="black" stroke-width="1" fill="lightgray" />
-        </svg>
-      </div>
-
       <div id="shoulder-container">
-        <svg id="shoulder" width="600" height="300">
-          <rect id="gp4" x="0"   y="225" width="100" height="50" rx="15" stroke="black" stroke-width="1" fill="lightgray" />
-          <rect id="gp5" x="500" y="225" width="100" height="50" rx="15" stroke="black" stroke-width="1" fill="lightgray" />
-
-          <rect id="gp6" x="20"  y="50" width="60" height="150" rx="15" stroke="black" stroke-width="1" fill="black" fill-opacity="0" />
-          <rect id="gp7" x="520" y="50" width="60" height="150" rx="15" stroke="black" stroke-width="1" fill="black" fill-opacity="0" />
+        <svg id="shoulder" viewBox="0 0 610 310" width="457.5" height="232.5">
+          <rect id="gp5" x="505" y="230" width="100" height="50" rx="15" stroke="#000" stroke-width="1" fill="#d3d3d3" />
+          <rect id="gp4" x="5"   y="230" width="100" height="50" rx="15" stroke="#000" stroke-width="1" fill="#d3d3d3" />
+          <rect id="gp6" x="25"  y="55"  width="60" height="150" rx="15" stroke="#000" stroke-width="1" fill="#000" fill-opacity="0" />
+          <rect id="gp7" x="525" y="55"  width="60" height="150" rx="15" stroke="#000" stroke-width="1" fill="#000" fill-opacity="0" />
         </svg>
       </div>
 
-      <div id="abxy-container">
-        <svg id="abxy" width="300" height="300">
-          <circle id="gp0" cx="150" cy="250" r="50" stroke="black" stroke-width="1" fill="#3cdb4e" fill-opacity="0.25"/>
-          <circle id="gp1" cx="250" cy="150" r="50" stroke="black" stroke-width="1" fill="#d04242" fill-opacity="0.25"//>
-          <circle id="gp2" cx="50"  cy="150" r="50" stroke="black" stroke-width="1" fill="#40ccd0" fill-opacity="0.25"//>
-          <circle id="gp3" cx="150" cy="50"  r="50" stroke="black" stroke-width="1" fill="#ecdb33" fill-opacity="0.25"//>
-        </svg>
+      <div class="button-row">
+        <div id="left-joystick" class="joystick">
+          <div class="x-axis"></div>
+          <div class="y-axis"></div>
+          <div class="joystick-outline"></div>
+          <div id="left-joystick-pos" class="joystick-pos"></div>
+        </div>
+
+        <div id="gamepad-menu-container">
+          <svg id="gp-menu" viewBox="0 0 310 110" width="155" height="55">
+            <rect id="gp8" x="30"  y="45" width="50" height="30" rx="15" stroke="#000" stroke-width="1" fill="#d3d3d3" />
+            <rect id="gp9" x="230" y="45" width="50" height="30" rx="15" stroke="#000" stroke-width="1" fill="#d3d3d3" />
+            <circle id="gp16" cx="155" cy="55" r="50" stroke="#000" stroke-width="1" fill="#d3d3d3" />
+          </svg>
+        </div>
+
+        <div id="abxy-container">
+          <svg id="abxy" viewBox="0 0 310 310" width="155" height="155">
+            <circle id="gp0" cx="155" cy="255" r="50" stroke="#000" stroke-width="1" fill="#3cdb4e" fill-opacity="0.25"/>
+            <circle id="gp1" cx="255" cy="155" r="50" stroke="#000" stroke-width="1" fill="#d04242" fill-opacity="0.25"/>
+            <circle id="gp2" cx="55"  cy="155" r="50" stroke="#000" stroke-width="1" fill="#40ccd0" fill-opacity="0.25"/>
+            <circle id="gp3" cx="155" cy="55"  r="50" stroke="#000" stroke-width="1" fill="#ecdb33" fill-opacity="0.25"/>
+          </svg>
+        </div>
       </div>
 
-      <div id="dpad-container">
-        <svg id="dpad" width="300" height="300">
-          <polygon id="gp13" points="150,150 200,200 200,300 100,300 100,200" stroke="black" stroke-width="1" fill="lightgray" />          
-          <polygon id="gp14" points="150,150 200,200 200,300 100,300 100,200" stroke="black" stroke-width="1" fill="lightgray" transform="rotate(90, 150, 150)" />
-          <polygon id="gp12" points="150,150 200,200 200,300 100,300 100,200" stroke="black" stroke-width="1" fill="lightgray" transform="rotate(180, 150, 150)"/>
-          <polygon id="gp15" points="150,150 200,200 200,300 100,300 100,200" stroke="black" stroke-width="1" fill="lightgray" transform="rotate(-90, 150, 150)"/>
-        </svg>
+      <div class="button-row">
+        <div id="dpad-container">
+          <svg id="dpad" viewBox="0 0 310 310" width="155" height="155">
+            <polygon id="gp13" points="155,155 205,205 205,305 105,305 105,205" stroke="#000" stroke-width="1" fill="#d3d3d3" />          
+            <polygon id="gp14" points="155,155 205,205 205,305 105,305 105,205" stroke="#000" stroke-width="1" fill="#d3d3d3" transform="rotate( 90, 155, 155)" />
+            <polygon id="gp12" points="155,155 205,205 205,305 105,305 105,205" stroke="#000" stroke-width="1" fill="#d3d3d3" transform="rotate(180, 155, 155)"/>
+            <polygon id="gp15" points="155,155 205,205 205,305 105,305 105,205" stroke="#000" stroke-width="1" fill="#d3d3d3" transform="rotate(-90, 155, 155)"/>
+          </svg>
+        </div>
+
+        <div id="row3-spacer"></div>
+
+        <div id="right-joystick" class="joystick">
+          <div class="x-axis"></div>
+          <div class="y-axis"></div>
+          <div class="joystick-outline"></div>
+          <div id="right-joystick-pos" class="joystick-pos"></div>
+        </div>
       </div>
 
       <p id="gp-info">Gamepad info will show here. Press a button to begin.</p>
       <p id="gp-btns"></p>
     </div>
 
-    <script src="{{ "/assets/js/drift.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/assets/js/drift.min.js" | prepend: site.baseurl }}"></script>
     </body>
 </html>

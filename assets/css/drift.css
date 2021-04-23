@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
-    background-color: #eeeeee;
+    background-color: #eee;
 }
 
 body {
@@ -12,25 +12,26 @@ body {
 
 .main-sect {
     max-width: 90%;
-    padding: 0% 10% 10% 10%;
+    padding: 0% 10% 0% 10%;
     text-align: center;
 }
 
 #gp-btns {
     font-family: 'Courier New', Courier, monospace;
-    text-align: left;
+    text-align: center;
 }
 
 button {
     display: inline;
+    padding: 6px;
 }
 
 .joystick {
     position: relative;
-    height: 200px;
-    width: 200px;
-    border: 10px solid orange;
+    height: 150px;
+    width: 150px;
     display: inline-block;
+    margin: 10px;
 }
 
 .x-axis {
@@ -74,4 +75,20 @@ button {
     transform: translateX(-50%) translateY(-50%);
     border: 5px solid lightgray;
     background: white;
+}
+
+#shoulder-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#row3-spacer {
+    width: 130px;
 }

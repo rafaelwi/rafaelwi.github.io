@@ -16,6 +16,8 @@ var gpi = document.getElementById("gp-info")
 var gpb = document.getElementById("gp-btns")
 var lt = document.getElementById("gp6")
 var rt = document.getElementById("gp7")
+var leftJoystick = document.getElementById("left-joystick-pos")
+var rightJoystick = document.getElementById("right-joystick-pos")
 
 // Create an array of GamepadButton objects
 var buttons = [
@@ -36,14 +38,16 @@ var buttons = [
     new MyGamepadButton(16, "gp16", function() {this.setFillColour("gray")}, function() {this.setFillColour("lightgray")})
 ]
 
-var leftJoystick = document.getElementById("left-joystick-pos")
-var rightJoystick = document.getElementById("right-joystick-pos")
-
 var gpbs = ""
 var haveEvents = 'GamepadEvent' in window
 var haveWebkitEvents = 'WebKitGamepadEvent' in window
 var reqAniFrame = window.mozRequestAnimationFrame || window.requestAnimationFrame
 var gamepads = []
+var axesNames = ["Left Stick x-axis", "Left Stick y-axis", "Right Stick x-axis", "Right Stick y-axis"]
+var buttonNames = ["A Button", "B Button", "X Button", "Y Button", "LB", "RB", 
+    "LT", "RT", "Select", "Start", "Left Stick Pressed", "Right Stick Pressed", 
+    "Up", "Down", "Left", "Right", "Menu"
+]
 
 function gamepadConnectionHandler(e, connecting) {
     var gamepad = e.gamepad
@@ -64,15 +68,16 @@ function gamepadConnectionHandler(e, connecting) {
 }
 
 function updateGamepadStatus() {
-    // Reset an d check all gamepads
+    // Reset and check all gamepads
     gpbs = ""
     scanForGamepads()
     
     for (gp of gamepads) {
         // Check all axes
         for ([i,a] of gp.axes.entries()) {
-            gpbs += "Axes #" + i + " Value: " + a + "<br>"
+            gpbs += "<b>" + axesNames[i] + ": </b>" + (a<0?"":"+") + a.toFixed(6) + "&nbsp;&nbsp;&nbsp;&nbsp;"
         }
+        gpbs += "<br>"
 
         // Check all buttons
         for ([i, b] of gp.buttons.entries()) {
@@ -81,7 +86,10 @@ function updateGamepadStatus() {
                 pressed = b.pressed
                 val = b.value
             }
-            gpbs += "Button " + i + " value: " + b.value + "<br>"
+            
+            gpbs += "<b>" + buttonNames[i] + ": </b>"
+            gpbs += (i == 6 || i == 7) ? b.value.toFixed(6) : b.value
+            gpbs += (i == 3 || i == 7 || i == 11) ? "<br>" : "&nbsp;&nbsp;&nbsp;&nbsp;"
         }
 
         // Update joystick positions
@@ -113,7 +121,7 @@ function updateGamepadStatus() {
         }
 
         // Vibrate based on LT's value and colour triggers
-        (gp.buttons[6].value > 0.0) ? vibrate(gp, gp.buttons[6].value) : null
+        (gp.buttons[0].value > 0.0 && gp.buttons[6].value > 0.0) ? vibrate(gp, gp.buttons[6].value) : null
         lt.setAttribute("fill-opacity", gp.buttons[6].value)
         rt.setAttribute("fill-opacity", gp.buttons[7].value)
 
