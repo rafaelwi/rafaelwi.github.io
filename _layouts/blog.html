@@ -70,6 +70,7 @@
             {% when '10 04' %}04 October {{ post.date | date: "%Y" }}</i> 🎂
             {% else %} {{ post.date | date_to_long_string }}
           {% endcase %}</i>
+          <br>
           {{ post.excerpt }}
           <hr>
       {% endfor %}
